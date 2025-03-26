@@ -1,0 +1,146 @@
+/* #region COLAPSABLE */
+
+.analysts-collapse-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: .5rem 0;
+    margin-bottom: 15px;
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+}
+.analysts-collapse-btn:focus {
+    border: none;
+}
+.analysts-collapse-btn svg {
+    vertical-align: middle;
+    fill: #d99b2d;
+    stroke-width: 2px;
+    width: 32px;
+}
+.analysts-collapse-btn[aria-expanded="true"] svg {
+    transform: rotate(180deg);
+}
+.analysts-collapse-btn__text {
+    display: inline-block;
+    font-family: 'din-medium';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    padding-left: 10px;
+    color: grey;
+}
+
+/* #endregion COLAPSABLE */
+
+/* #region TABLA */
+
+.main-table.hidden {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-out;
+}
+
+.main-table.visible {
+    max-height: 5000px;
+    transition: max-height 0.8s ease-in;
+}
+
+.main-table .main-table__table {
+    overflow-x: auto;
+}
+
+.main-table .main-table__table table {
+    display: inline-table;
+    margin-bottom: 50px;
+}
+
+.main-table .main-table__table table th,
+.main-table .main-table__table table td {
+    font-family: din-regular;
+    font-weight: bold !important;
+    line-height: 21px;
+    border: none;
+}
+
+.main-table .main-table__table table th {
+    font-family: din-black;
+    border: 1px solid #dadada;
+    background-color: #f3f3f3;
+    color: #292929;
+    font-size: 11px;
+    padding: 4px 16px;
+    vertical-align: middle;
+    height: 40px;
+}
+
+.main-table .main-table__table table td {
+    border-bottom: 1px solid #dadada;
+    color: #838383;
+    font-size: 13px;
+}
+
+.main-table .main-table__table table td a,
+.main-table .main-table__row .mt-cards__field .mt-cards__field-value a {
+    font-family: din-medium;
+    font-weight: 400 !important;
+    color: #838383;
+    text-decoration: none;
+}
+
+.main-table .main-table__table table td a:hover,
+.main-table .main-table__row .mt-cards__field .mt-cards__field-value a:hover {
+    font-weight: bolder !important;
+    color: #606266;
+}
+
+.main-table .main-table__pagination {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .main-table .main-table__row .mt-cards__field .mt-cards__field-label {
+        width: 36%;
+    }
+    .main-table .main-table__row .mt-cards__field .mt-cards__field-value {
+        width: 62%;
+    }
+    .main-table .main-table__row .mt-cards__field .mt-cards__field-label span {
+        font-family: din-medium;
+        font-size: 12px;
+        font-weight: 400;
+        color: #292929;
+    }
+    .main-table .main-table__row .mt-cards__field .mt-cards__field-value span {
+        font-family: din-regular;
+        font-size: 13px;
+        font-weight: bold;
+        color: #838383;
+    }
+    .main-table .main-table__row .mt-cards__field .mt-cards__field-value * {
+        overflow-wrap: break-word;
+        width: 100%;
+    }
+    .main-table .main-table__row .mt-cards__field .mt-cards__field-label,
+    .main-table .main-table__row .mt-cards__field .mt-cards__field-value {
+        padding: 14px 5px 14px 10px;
+        display: flex;
+        align-items: center;
+    }
+    .main-table .main-table__row .mt-cards__field .mt-cards__field-value a {
+        font-size: 13px;
+    }
+    .main-table .main-table__row .mt-cards__field:first-child {
+        background: #e5e5e5;
+    }
+    .main-table .main-table__row .mt-cards__field:first-child .mt-cards__field-value span {
+        font-family: din-regular;
+        font-size: 13px;
+        color: #292929;
+        text-transform: uppercase;
+    }
+}
+
+/* #endregion TABLA */

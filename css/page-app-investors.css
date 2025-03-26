@@ -1,0 +1,17 @@
+/* #region FILE GROUP */
+.ypfcom__main-section .links-list {
+    margin-top: 24px;
+}
+.ypfcom__main-section .links-list .links-list__item a {
+    font-family: din-medium;
+    font-size: 14px;
+    color: #808080;
+    text-decoration: none;
+    margin-bottom: 2px;
+}
+
+.ypfcom__main-section .links-list .links-list__item a:hover {
+    color: #292929;
+    text-decoration: none;
+}
+/* #endregion FILE GROUP */

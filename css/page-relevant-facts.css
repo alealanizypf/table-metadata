@@ -1,0 +1,15 @@
+/* #region BANNER */
+.ypfcom__banner-section--highlighted-text.banner {
+    margin-block-end: 74px;
+}
+
+@media (max-width: 420px) {
+    .ypfcom__banner-section--highlighted-text.banner {
+        margin-block-end: 128px;
+    }
+    .ypfcom__banner-section--highlighted-text.banner .banner__containe .banner__title {
+        line-height: 34px;
+    }
+}
+
+/* #endregion BANNER */

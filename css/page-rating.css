@@ -1,0 +1,219 @@
+/* #region BANNER */
+
+@media (max-width: 550px) {
+    .ypfcom__banner-section--highlighted-text.banner {
+        margin-block-end: 56px;
+    }
+}
+
+/* #endregion BANNER */
+
+/* #region TEXT */
+
+.ypfcom__cuerpo-texto a {
+    font-family: din-regular;
+    font-weight: 400 !important;
+}
+
+/* #endregion TEXT */
+
+/* #region TABLES */
+.rating-table .main-table table {
+    margin: 0;
+}
+.rating-table .main-table thead,
+.rating-table .main-table tbody {
+    width: 100%;
+    display: inline-table;
+}
+.rating-table .main-table .main-table__header {
+    border-bottom: none;
+    border: none;
+    border-left: solid 1px white;
+    line-height: initial;
+}
+.rating-table .main-table .main-table__row {
+    font-family: din-regular;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #e6e5e5;
+    color: #606266;
+    border: none;
+    border-bottom: 1px solid #dcdfe6;
+    border-left: solid 1px white;
+}
+.rating-table .main-table .main-table__row,
+.rating-table .main-table .main-table__row:hover {
+    background-color: #e6e5e5;
+    color: #606266;
+}
+.rating-table .main-table .main-table__row td {
+    border: none;
+}
+.rating-table .main-table .vtl-empty-msg,
+.rating-table .main-table .main-table__pagination {
+    display: none;
+}
+.rating-table .main-table .mt-cards__card {
+    margin-bottom: 0;
+}
+.rating-table .main-table .mt-cards__field {
+    padding: 10px;
+    color: #292929;
+    font-family: din-medium;
+    font-size: 12px;
+    font-weight: 400;
+}
+.rating-table .main-table .mt-cards__field-label {
+    padding-right: 7px;
+    text-transform: uppercase;
+}
+@media (max-width: 768px) {
+    .rating-table .main-table .main-table__row {
+        border-bottom: none;
+    }
+}
+/* TABLA 1 */
+.rating-table .main-table.rating__tabla-1 .main-table__header {
+    width: calc(100% / 3) !important;
+    background-color: #292929;
+    font-family: 'din-medium';
+    font-weight: 700;
+    font-size: 17px;
+}
+@media (max-width: 768px) {
+    .rating-table .main-table.rating__tabla-1 {
+        display: none;
+    }
+    .rating-table .main-table.rating__tabla-2 .mt-cards__field {
+        padding: 11px;
+    }
+    .rating-table .main-table.rating__tabla-2 .mt-cards__field-label {
+        font-size: 11px;
+        display: flex;
+        align-items: center;
+        color: #606266;
+        margin-top: 4px;
+        width: 35%;
+    }
+    .rating-table .main-table.rating__tabla-2 .mt-cards__field-value {
+        font-family: din-regular;
+        color: #000;
+        font-weight: bold;
+        margin-top: 2px;
+        width: 60%;
+    }
+    .rating-table .main-table.rating__tabla-2 .mt-cards__field-label,
+    .rating-table .main-table.rating__tabla-2 .mt-cards__field-value {
+        padding: 0;
+        padding-right: 7px;
+    }
+}
+/* TABLA 2 */
+.rating-table .rating__tabla-1-header {
+    background-color: #292929;
+    color: #fff;
+    font-family: 'din-medium';
+    font-weight: 700;
+    font-size: 17px;
+    line-height: initial;
+    padding: 12px;
+}
+.rating-table .main-table.rating__tabla-2 .main-table__header {
+    width: calc(100% / 6) !important;
+    font-family: din-black;
+    font-size: 15px;
+    background-color: #cdcccc;
+}
+.rating-table .main-table.rating__tabla-2 .main-table__row td {
+    width: calc(100% / 6) !important;
+}
+.rating-table .main-table.rating__tabla-2 .mt-cards__field:nth-child(1) {
+    order: 2;
+}
+.rating-table .main-table.rating__tabla-2 .mt-cards__field:nth-child(2) {
+    order: 3;
+}
+.rating-table .main-table.rating__tabla-2 .mt-cards__field:nth-child(3) {
+    order: 5;
+}
+.rating-table .main-table.rating__tabla-2 .mt-cards__field:nth-child(4) {
+    order: 6;
+}
+.rating-table .main-table.rating__tabla-2 .mt-cards__field:nth-child(5) {
+    order: 8;
+}
+.rating-table .main-table.rating__tabla-2 .mt-cards__field:nth-child(6) {
+    order: 9;
+}
+.rating-table .main-table.rating__tabla-2 .rating__tabla-1-header-0 {
+    order: 1;
+}
+.rating-table .main-table.rating__tabla-2 .rating__tabla-1-header-1 {
+    order: 4;
+}
+.rating-table .main-table.rating__tabla-2 .rating__tabla-1-header-2 {
+    order: 7;
+}
+.rating-table .main-table.rating__tabla-2 .mt-cards__field {
+    border-bottom: 1px solid #fff;
+}
+.rating-table .main-table.rating__tabla-2 .mt-cards__field-value {
+    font-size: 14px;
+}
+
+@media (max-width: 1200px) {
+    .rating-table .main-table.rating__tabla-2 .main-table__header {
+        font-size: 13px;
+    }
+}
+/* TITLE TABLE 3 */
+.rating-table .rating__table-title {
+    padding: 10px;
+    border-bottom: 1px solid #dcdfe6;
+    color: #fff;
+    font-family: 'din-black';
+    font-size: 15px;
+    font-weight: 700;
+    background-color: #cdcccc;
+    margin-top: 32px;
+}
+/* TABLA 3 */
+.rating-table .main-table.rating__tabla-3 {
+    margin-bottom: 40px;
+}
+.rating-table .main-table.rating__tabla-3 .main-table__header {
+    width: calc(100% / 4) !important;
+    font-family: din-regular;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #e6e5e5;
+    color: #606266;
+    border: none;
+}
+.rating-table .main-table.rating__tabla-3 .main-table__row td {
+    width: calc(100% / 4) !important;
+    background-color: #fff;
+}
+.rating-table .main-table.rating__tabla-3 .mt-cards__field:not(:first-child) {
+    background-color: #fff;
+}
+.rating-table .main-table.rating__tabla-3 .mt-cards__field:not(:first-child) .mt-cards__field-value {
+    color: #838383;
+}
+@media (max-width: 768px) {
+    .rating-table .main-table.rating__tabla-3 .mt-cards__field:nth-child(1) .mt-cards__field-value {
+        font-family: din-regular;
+        font-weight: bold;
+        color: #000;
+        text-transform: uppercase;
+    }
+    .rating-table .main-table.rating__tabla-3 .mt-cards__field-label {
+        width: 40%;
+    }
+    .rating-table .main-table.rating__tabla-3 .mt-cards__field-value {
+        width: 60%;
+    }
+}
+
+/* #endregion TABLES */

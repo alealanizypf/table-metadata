@@ -1,0 +1,36 @@
+/* #region BANNER */
+.ypfcom__banner-section--highlighted-text.banner {
+    margin-block-end: 55px;
+}
+
+@media (max-width: 420px) {
+    .ypfcom__banner-section--highlighted-text.banner {
+        margin-block-end: 75px;
+    }
+}
+
+/* #endregion BANNER */
+
+/* #region FAQ SECTION */
+
+.ypfcom__faq-section .info-block__content .faq-table {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    margin-top: 16px;
+}
+.ypfcom__faq-section .info-block__content .faq-table > .faq-table__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+.ypfcom__faq-section .info-block__content .faq-table > .faq-table__item > p {
+    margin: 0px;
+    padding: 3px 10px;
+}
+.ypfcom__faq-section .info-block__content .faq-table > .faq-table__item > p:nth-child(1) {
+    min-width: 120px;
+}
+
+/* #endregion FAQ SECTION */

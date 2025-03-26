@@ -1,0 +1,762 @@
+{
+   "title": "Emisiones Internacionales",
+   "date": "19/03/2025 11:06",
+   "scope": "LOCAL",
+   "structure": "TREE",
+   "data": [
+     {
+       "text": "Clase XXXIV",
+       "props": {
+         "Bono": "Clase XXXIV",
+         "FechaEmisión": "17/01/2025",
+         "Vencimiento": "17/01/2034",
+         "MontoVigente": "USD 1.100.000.000",
+         "MercadoDeCotizacion": "BCBA, MAE y Luxemburgo",
+         "Estado": "-"
+       },
+       "type" : "Emisiones",
+       "children": [
+         {
+           "text": "YPF - Aviso de Suscripción ON XXXIV Internacional",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/YPF-Aviso-de-Suscripcion-ON-XXXIV-Internacional.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "YPF - Suplemento ON XXXIV Internacional",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/YPF-Suplemento-ON-XXXIV-Internacional.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "YPF - Aviso de Resultados ON Clase XXXIV",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/YPF-Aviso-de-Resultados-ON-Clase-XXXIV.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "YPF - Clase XXXIV Internacional - Aviso Complementario - Calificaciones",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/YPF-Clase-XXXIV-Internacional-Aviso-Complementario-Calificaciones.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         }
+       ]
+     },
+     {
+       "text": "Clase XXVIII(*)",
+       "props": {
+         "Bono": "Clase XXVIII(*)",
+         "FechaEmisión": "17/01/2024",
+         "Vencimiento": "17/01/2031",
+         "MontoVigente": "USD 800.000.000",
+         "MercadoDeCotizacion": "MAE y Luxemburgo",
+         "Estado": "Vigente"
+       },
+       "type" : "Emisiones",
+       "children": [
+         {
+           "text": "Suplemento de precios XXVIII",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Suplemento-ON-XXVIII.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Aviso de suscripción XXVIII",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Aviso-de-Suscripcion-ON-XXVIII.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Aviso de Resultados Clase XXVIII",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/ONs-Clase-XXVIII-Aviso-de-Resultados.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         }
+       ]
+     },
+     {
+       "text": "Clase XIII",
+       "props": {
+         "Bono": "Clase XIII",
+         "FechaEmisión": "21/07/2020",
+         "Vencimiento": "23/03/2025",
+         "MontoVigente": "USD 127.927.073",
+         "MercadoDeCotizacion": "Luxemburgo y MAE",
+         "Estado": "Vigente"
+       },
+       "type" : "Emisiones",
+       "children": [
+         {
+           "text": "Adenda-al-Suplemento-y-al-Aviso-de-Suscripcion",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Adenda-al-Suplemento-y-al-Aviso-de-Suscripcion.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Canje-Deuda-Aviso-de-Resultados-2021Feb11",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Canje-Deuda-Aviso-de-Resultados-2021Feb11.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "YPF-Acta-de-Subdelegado-Aviso-de-Resultados-Final",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/YPF-Acta-de-Subdelegado-Aviso-de-Resultados-Final.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "YPF-Aviso-de-Resultados-Final",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/YPF-Aviso-de-Resultados-Final.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "YPF-Aviso-de-Suscripción",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/YPF-Aviso-de-Suscripci%C3%B3n.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "YPF-Canje-2020-Aviso-de-Resultados-Inicial",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/YPF-Canje-2020-Aviso-de-Resultados-Inicial.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "YPF-Canje-2020-Segunda-Adenda-al-Suplemento-y-Aviso-de-Suscripcion",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/YPF-Canje-2020-Segunda-Adenda-al-Suplemento-y-Aviso-de-Suscripcion.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "YPF-Suplemento-de-Precio",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/YPF-Suplemento-de-Precio.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         }
+       ]
+     },
+     {
+       "text": "Clase XXXIX",
+       "props": {
+         "Bono": "Clase XXXIX",
+         "FechaEmisión": "22/04/2015",
+         "Vencimiento": "28/07/2025",
+         "MontoVigente": "USD 756.966.002",
+         "MercadoDeCotizacion": "BCBA, MAE y Luxemburgo",
+         "Estado": "Vigente"
+       },
+       "type" : "Emisiones",
+       "children": [
+         {
+           "text": "Adenda-Suplemento-de Precio-ONs-Clase- XXXIX",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Adenda-Suplemento-de%20Precio-ONs-Clase-%20XXXIX.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Aviso-Complementario-Clase-XXXIX",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Aviso-Complementario-Clase-XXXIX.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Aviso-de-Resultados-Clase-XXXIX",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Aviso-de-Resultados-Clase-XXXIX.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Aviso-de-Suscripcion-YPF-ONs-Clase-XXXIX",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Aviso-de-Suscripcion-YPF-ONs-Clase-XXXIX.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Canje-Deuda-Aviso-de-Resultados-2021Feb11",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Canje-Deuda-Aviso-de-Resultados-2021Feb11.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Suplemento-de-Precio-Clase-XXXIX",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Suplemento-de-Precio-Clase-XXXIX.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         }
+       ]
+     },
+     {
+       "text": "Clase XVI",
+       "props": {
+         "Bono": "Clase XVI",
+         "FechaEmisión": "12/02/2021",
+         "Vencimiento": "12/02/2026",
+         "MontoVigente": "USD 537.080.039",
+         "MercadoDeCotizacion": "Luxemburgo y MAE",
+         "Estado": "Vigente"
+       },
+       "type" : "Emisiones",
+       "children": [
+         {
+           "text": "Clase-XVI-Adenda-Suplemento-de-Precio-2021Jan14",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVI-Adenda-Suplemento-de-Precio-2021Jan14.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVI-Aviso-de-Resultados-2021Feb11",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVI-Aviso-de-Resultados-2021Feb11.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVI-Aviso-de-Suscripcion-2021Jan07",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVI-Aviso-de-Suscripcion-2021Jan07.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVI-Aviso-de-Suscripcion-Enmendado-2021Jan25",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVI-Aviso-de-Suscripcion-Enmendado-2021Jan25.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVI-Enmienda-al-Suplemento-de-Precio-2021Feb01",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVI-Enmienda-al-Suplemento-de-Precio-2021Feb01.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVI-Enmienda-al-Suplemento-de-Precio-2021Jan25",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVI-Enmienda-al-Suplemento-de-Precio-2021Jan25.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVI-Enmienda-al-Suplemento-de-Precio-y-al-Aviso-de-Suscripcion-2021Feb07",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVI-Enmienda-al-Suplemento-de-Precio-y-al-Aviso-de-Suscripcion-2021Feb07.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVI-HR-26-02-2021-Resultados-Finales-de-las-Oferta-de-Canje",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVI-HR-26-02-2021-Resultados-Finales-de-las-Oferta-de-Canje.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVI-Suplemento-de-Precio-2021Jan07",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVI-Suplemento-de-Precio-2021Jan07.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Form-8937-YPF",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Form-8937-YPF.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         }
+       ]
+     },
+     {
+       "text": "Clase LIII",
+       "props": {
+         "Bono": "Clase LIII",
+         "FechaEmisión": "15/12/2017",
+         "Vencimiento": "21/07/2027",
+         "MontoVigente": "USD 643.428.000",
+         "MercadoDeCotizacion": "Luxemburgo y MAE",
+         "Estado": "Vigente"
+       },
+       "type" : "Emisiones",
+       "children": [
+         {
+           "text": "Aviso-de-Resultados-ON-Clase-53-Adic",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Aviso-de-Resultados-ON-Clase-53-Adic.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Aviso-de-Resultados-ON-Clase-53-Ampliación",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Aviso-de-Resultados-ON-Clase-53-Ampliaci%C3%B3n.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Canje-Deuda-Aviso-de-Resultados-2021Feb11",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Canje-Deuda-Aviso-de-Resultados-2021Feb11.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-53-Aviso-de-Resultados",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-53-Aviso-de-Resultados.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-53-Aviso-de-Suscripcion",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-53-Aviso-de-Suscripcion.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-53-Suplemento-de-precio",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-53-Suplemento-de-precio.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "YPF 10%",
+           "props": {
+             "url": "https://inversores.ypf.com/Emisiones.html#",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         }
+       ]
+     },
+     {
+       "text": "Clase I",
+       "props": {
+         "Bono": "Clase I",
+         "FechaEmisión": "24/06/2019",
+         "Vencimiento": "27/06/2029",
+         "MontoVigente": "USD 398.972.000",
+         "MercadoDeCotizacion": "Luxemburgo y MAE",
+         "Estado": "Vigente"
+       },
+       "type" : "Emisiones",
+       "children": [
+         {
+           "text": "Canje-Deuda-Aviso-de-Resultados-2021Feb11",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Canje-Deuda-Aviso-de-Resultados-2021Feb11.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "YPF-Clase-I-EF-Aviso-de-resultados",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/YPF-Clase-I-EF-Aviso-de-resultados.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "YPF-Suplemento-de-Precio-Clase-I",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/YPF-Suplemento-de-Precio-Clase-I.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         }
+       ]
+     },
+     {
+       "text": "Clase XVII",
+       "props": {
+         "Bono": "Clase XVII",
+         "FechaEmisión": "12/02/2021",
+         "Vencimiento": "30/06/2029",
+         "MontoVigente": "USD 747.833.257",
+         "MercadoDeCotizacion": "Luxemburgo y MAE",
+         "Estado": "Vigente"
+       },
+       "type" : "Emisiones",
+       "children": [
+         {
+           "text": "Clase-XVII-Adenda-Suplemento-de-Precio-2021Jan14",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVII-Adenda-Suplemento-de-Precio-2021Jan14.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVII-Aviso-de-Resultados-2021Feb11",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVII-Aviso-de-Resultados-2021Feb11.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVII-Aviso-de-Suscripcion-2021Jan07",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVII-Aviso-de-Suscripcion-2021Jan07.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVII-Aviso-de-Suscripcion-Enmendado-2021Jan25",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVII-Aviso-de-Suscripcion-Enmendado-2021Jan25.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVII-Enmienda-al-Suplemento-de-Precio-2021Feb01",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVII-Enmienda-al-Suplemento-de-Precio-2021Feb01.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVII-Enmienda-al-Suplemento-de-Precio-2021Jan25",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVII-Enmienda-al-Suplemento-de-Precio-2021Jan25.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVII-Enmienda-al-Suplemento-de-Precio-y-al-Aviso-de-Suscripcion-2021Feb07",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVII-Enmienda-al-Suplemento-de-Precio-y-al-Aviso-de-Suscripcion-2021Feb07.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVII-Suplemento-de-Precio-2021Jan07",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVII-Suplemento-de-Precio-2021Jan07.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Form-8937-YPF",
+           "props": {
+             "url": "https://inversores.test.ypf.com/documents/emisiones/internacionales/Form-8937-YPF.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         }
+       ]
+     },
+     {
+       "text": "Clase XVIII",
+       "props": {
+         "Bono": "Clase XVIII",
+         "FechaEmisión": "12/02/2021",
+         "Vencimiento": "30/09/2033",
+         "MontoVigente": "USD 575.649.021",
+         "MercadoDeCotizacion": "Luxemburgo y MAE",
+         "Estado": "Vigente"
+       },
+       "type" : "Emisiones",
+       "children": [
+         {
+           "text": "Clase-XVIII-Adenda-Suplemento-de-Precio-2021Jan14",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVIII-Adenda-Suplemento-de-Precio-2021Jan14.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVIII-Aviso-de-Resultados-2021Feb11",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVIII-Aviso-de-Resultados-2021Feb11.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVIII-Aviso-de-Suscripcion-2021Jan07",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVIII-Aviso-de-Suscripcion-2021Jan07.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVIII-Aviso-de-Suscripcion-Enmendado-2021Jan25",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVIII-Aviso-de-Suscripcion-Enmendado-2021Jan25.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVIII-Enmienda-al-Suplemento-de-Precio-2021Feb01",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVIII-Enmienda-al-Suplemento-de-Precio-2021Feb01.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVIII-Enmienda-al-Suplemento-de-Precio-2021Jan25",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVIII-Enmienda-al-Suplemento-de-Precio-2021Jan25.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVIII-Enmienda-al-Suplemento-de-Precio-y-al-Aviso-de-Suscripcion-2021Feb07",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVIII-Enmienda-al-Suplemento-de-Precio-y-al-Aviso-de-Suscripcion-2021Feb07.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Clase-XVIII-Suplemento-de-Precio-2021Jan07",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Clase-XVIII-Suplemento-de-Precio-2021Jan07.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Form-8937-YPF",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Form-8937-YPF.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         }
+       ]
+     },
+     {
+       "text": "Clase LIV",
+       "props": {
+         "Bono": "Clase LIV",
+         "FechaEmisión": "15/12/2017",
+         "Vencimiento": "15/12/2047",
+         "MontoVigente": "USD 536.612.500",
+         "MercadoDeCotizacion": "Luxemburgo y MAE",
+         "Estado": "Vigente"
+       },
+       "type" : "Emisiones",
+       "children": [
+         {
+           "text": "Aviso-de-Resultados-ON-clase-54",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Aviso-de-Resultados-ON-clase-54.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         },
+         {
+           "text": "Canje-Deuda-Aviso-de-Resultados-2021Feb11",
+           "props": {
+             "url": "https://inversores.ypf.com/documents/emisiones/internacionales/Canje-Deuda-Aviso-de-Resultados-2021Feb11.pdf",
+             "alt": "Descargar documento",
+             "target": "Nueva"
+           },
+           "type": "link",
+            "children": []
+         }
+       ]
+     }
+   ],
+   "props": {},
+   "type": null,
+   "target": null,
+   "allowedTypes": null
+ }

@@ -1,0 +1,114 @@
+/* CONTACTO */
+.breadcrumb {
+    margin-bottom: 0;
+}
+.breadcrumb__list {
+    padding-left: 0;
+}
+/* FORM */
+.form-control {
+    width: 95%;
+    border: 3px solid #e7e7e7;
+    padding: 0 5px;
+    height: 26px;
+    color: #666;
+    font-size: 13px;
+    border-radius: 0;
+}
+.form-label {
+    font-family: din-medium;
+    color: #676767;
+    font-size: 13px;
+}
+
+.button__spaced {
+    cursor: pointer;
+    color: #fff;
+    background: #d8d8d8 65px 16px no-repeat;
+    text-transform: uppercase;
+    border: none;
+    transition: all .2s ease-in;
+    width: 135px;
+    text-align: center;
+    font-size: 12px;
+    height: 40px;
+    margin-top: 50px;
+    border-radius: 0;
+}
+.text-danger {
+    font-weight: 400 !important;
+}
+.form-control.is-invalid, .was-validated .form-control:invalid {
+    border-width: 1px;
+}
+
+/* contact INFO */
+.contact-data {
+    padding: 15px;
+    padding-top: 0;
+    margin-left: auto;
+  }
+
+  .contact-data__card {
+    background-color: #f6f6f6;
+    padding: 20px;
+  }
+
+  @media (min-width: 992px) {
+    .contact-data__card {
+      max-width: 336px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .contact-data {
+      padding-top: 20px;
+    }
+  }
+
+  .contact-data__card p,
+  .contact-data__card a {
+    font-family: "din-medium";
+    font-size: 11px;
+    color: #838383;
+    text-decoration: none;
+    margin: 0px;
+  }
+
+  .contact-data__card a {
+    font-size: 11px;
+    /* padding-bottom: 14px; */
+    display: block;
+    border-bottom: 1px solid rgb(217, 155, 45);
+    margin-bottom: 30px;
+  }
+
+  .contact-data__card__bold {
+    font-weight: bold;
+  }
+
+  .contact-data__card p.email {
+    color: #d99b2d;
+    font: 11px/25px "din-medium";
+    display: flex;
+    gap: 5px;
+    margin-top: 15px;
+    margin-bottom: 13px;
+  }
+
+  .contact-data__card .email-icon {
+    background-image: url(../images/sprite-contacto.webp);
+    display: block;
+    background-position: top left;
+    width: 25px;
+    height: 25px;
+  }
+
+  .contact-data__card p.contact-data__card__role {
+    margin-bottom: 30px;
+    line-height: 10px;
+  }
+
+  .container.cuerpo-mb {
+    margin-top: 67px !important;
+  }

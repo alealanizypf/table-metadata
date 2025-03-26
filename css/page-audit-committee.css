@@ -1,0 +1,80 @@
+/* #region TABLA */
+
+.main-table .main-table__table {
+    overflow-x: auto;
+}
+
+.main-table .main-table__table table {
+    margin-bottom: 50px;
+}
+
+.main-table .main-table__table table th,
+.main-table .main-table__table table td {
+    font-family: din-regular;
+    font-weight: bold !important;
+    line-height: 21px;
+    border: none;
+}
+
+.main-table .main-table__table table th {
+    font-family: din-black;
+    border: 1px solid #dadada;
+    background-color: #f3f3f3;
+    color: #292929;
+    font-size: 11px;
+    padding: 4px 16px;
+    vertical-align: middle;
+    height: 40px;
+}
+
+.main-table .main-table__table table td {
+    border-bottom: 1px solid #dadada;
+    color: #838383;
+    font-size: 13px;
+}
+
+.main-table .main-table__pagination {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .main-table .main-table__table table {
+        display: inline-table;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-table .main-table__row .mt-cards__field .mt-cards__field-label span {
+        font-family: din-medium;
+        font-size: 12px;
+        font-weight: 400;
+        color: #292929;
+    }
+    .main-table .main-table__row .mt-cards__field .mt-cards__field-value span {
+        font-family: din-regular;
+        font-size: 13px;
+        font-weight: bold;
+        color: #838383;
+    }
+    .main-table .main-table__row .mt-cards__field .mt-cards__field-value * {
+        overflow-wrap: break-word;
+        width: 100%;
+    }
+    .main-table .main-table__row .mt-cards__field .mt-cards__field-label,
+    .main-table .main-table__row .mt-cards__field .mt-cards__field-value {
+        padding: 14px 5px 14px 10px;
+        display: flex;
+        align-items: center;
+    }
+    .main-table .main-table__row .mt-cards__field:nth-child(2) {
+        background: #e5e5e5;
+    }
+    .main-table .main-table__row .mt-cards__field:nth-child(2) .mt-cards__field-value span {
+        font-family: din-regular;
+        font-size: 13px;
+        color: #292929;
+        text-transform: uppercase;
+    }
+}
+
+/* #endregion TABLA */

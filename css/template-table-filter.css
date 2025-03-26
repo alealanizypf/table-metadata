@@ -1,0 +1,137 @@
+/* #region FILTRO */
+.filter-container {
+    padding: 10px;
+    background: #f2f1f1;
+    margin-bottom: 3px;
+    font-family: din-medium;
+}
+.filter-container .custom-select {
+    position: relative;
+    display: inline-block;
+    font-size: 13px;
+}
+.filter-container .custom-select .selected {
+    color: #838383;
+    background-color: #fff;
+    width: 160px;
+    height: 33px;
+    line-height: 36px;
+    cursor: pointer;
+    padding-left: 8px;
+    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAAQhSURBVGhD7ZdNaBxlGMeT/epmdXVtNbEqVm1paSEiaqhKa3YTIShaizWkkNqWCgHvCTkkIV/k0INePEiLtx60FDQeRd0ERC/mECyWlpqmX1YhhTTa9CPb7vr7z+7ESXZmdjbZQ4T5wZ9532fn45l3/vM8s1U+Pj4+Pj4+PhWgt7e3ujB0xdNO3d3dwWg0Gq6urs4ODAwsFMIVRQmHQqGaTCazMDIycq8QtsU1aRKMBQKBrSS7i+lG9A+aQJN9fX3X2a6anp6eYCQSqec6DUyfRbrGZDabnejv75/RPssJFrZFkDDnCbzAcB9Jd7B9B72IHkF/J5PJK+Pj4xnGK4YbD4XD4W2cvx0dIvQeUvIPoZupVOrPsbGxO4yXYJv04OBghISf50SHJUKPoQCqQVvRBuIZEp9aTeLNzc0vc54P0X6mz+WjVevQJmKb2F7mGjNcY0niSqQIDoij3QxfQetRSPECYfQaOsCNvTU0NPSoES2Dzs7OAAvToGTRHkJP5H9Z5AFUj5r43byZRWyTBq3odlRnzIqJo2b0ASdNkkDMiHqAlzoQj8dliQNIdng6/0sRUbQD6V1aglPSqhBz6K4xs0er/ybqYMVbvSYei8W0wh+hVqaygBM5dAPdMmYWnJKeRz+hSVQq8VdReymraIW5sZ0kK0u8S6hoBZdxEf2Ipo2ZBdukSeA2Gx3wLfoF6SaceBCl0EGSSZGY/LiErq6uACtsVgk3S5j8jtLs+0MwGLyUD/2HbfVIp9M5lRpKzlUOvEZIFaMWOZVI3fxmlGB/VZXzvPGLDaKlpUWWOIJkiafyUUf+QF+i42iaplPUaEp2RB55LRfby/B9pIqiF8QJNYaf0ee5XC49Ozs7l0gkXuL4NrSPuJuHxQWkhEep4XrCtjg2FxNWfL6xsfEcltH0caTmEtHEBtXYZ1CMJOdp/RG2qjDysOJuKOHv0GckfNqIOFAyacGjXsAq17i4rKK6qWZjrd1WdHeywBb2ly3eYPxkIe7EZfQFOoYusVD3FXTC0weTCVapI4m3GbahJFKjcUJVRy90wpg5oxU+ib52s4QVTyttUrDKeayi41SylJCTVfQk3PwvTEscI+FfjYgH3B6ZLXxI3eQlG2V4FKmOF33QeMSsEh+jolrsRln2sFKoKnrBVFVeR6VW1USdTit8Cn3l1RJWyrKHFVlFX3kkrhtXDd+AnKxiRQmraR0vxxJWyraHFT7S57DKNww/Qb+hUp+psoRW+FNUliWsrNgeVjw2oCmkKuHaOLywYntYWdaA9Dn7MJJVskg1V6v6PSrZOLxQkaSFGlBTU9NfDNUo9JmqGq4PrTNIK3wCXSzVOLxQEXtYGR4e1uep/uepc8om8rFeuLOsslZ+7YLPo9yA/uH8vyDpij9JHx8fH5+1TlXVv17zGRcFZXlUAAAAAElFTkSuQmCC) right .75rem center/12px 14px no-repeat;
+}
+.filter-container .custom-select .selected:focus {
+    border: 2px solid #d8d8d8;
+}
+.filter-container .custom-select .selected:hover {
+    border: 2px solid #d8d8d8;
+}
+.filter-container .custom-select .options {
+    font-family: din-regular;
+    font-weight: 400;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    overflow: auto;
+    display: none;
+    max-height: 210px;
+    z-index: 1;
+}
+.filter-container .custom-select .item {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: #f1f1f1 solid 1px;
+}
+.filter-container .custom-select .item:hover {
+    background-color: #f0f0f0;
+}
+/* #endregion FILTRO */
+
+/* #region FILAS */
+.table-filter-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 13px;
+    font-family: "din-medium";
+    font-weight: 400;
+    background-color: #f0f0f0;
+    color: #838383;
+    padding: 12px 30px 12px 15px;
+    margin-bottom: 2px;
+    text-decoration: none;
+}
+.table-filter-row:hover {
+    color: #3a3939;
+}
+.table-filter-row-fecha {
+    margin-right: 12px;
+}
+.table-filter-row-link {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.table-filter-row-link::before {
+    content: " ";
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background: url(https://ypf.com/images/decorativas/pdf.png) no-repeat left center;
+}
+@media only screen and (max-width: 767px) {
+    .table-filter-row {
+        flex-direction: column;
+        padding: 7px 5px;
+    }
+    .table-filter-row>div {
+        align-self: flex-start;
+        padding: 7px 10px;
+        line-height: 19.5px;
+    }
+    .table-filter-row-link {
+        margin-left: 0;
+    }
+}
+/* #endregion FILAS */
+
+/* #region ASAMBLEA DE ACCIONISTAS */
+#table-filter-asamblea-accionistas .table-filter-row {
+    padding: 8px 15px;
+}
+#table-filter-asamblea-accionistas .table-filter-row-titulo {
+    display: flex;
+    align-items: center;
+}
+#table-filter-asamblea-accionistas .table-filter-row-titulo::before {
+    content: " ";
+    width: 25px;
+    min-width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin-right: 4px;
+    background: url(https://ypf.com/images/decorativas/pdf.png) no-repeat left center;
+}
+/* #endregion ASAMBLEA DE ACCIONISTAS */
+
+/* #region CÓDIGO GOBIERNO SOCIETARIO */
+#table-filter-gobierno-societario .table-filter-row {
+    padding: 8px 15px;
+}
+#table-filter-gobierno-societario .table-filter-row-titulo {
+    display: flex;
+    align-items: center;
+}
+#table-filter-gobierno-societario .table-filter-row-titulo::before {
+    content: " ";
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin-right: 4px;
+    background: url(https://ypf.com/images/decorativas/pdf.png) no-repeat left center;
+}
+/* #endregion CÓDIGO GOBIERNO SOCIETARIO */

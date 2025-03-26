@@ -1,0 +1,56 @@
+/* #region BANNER */
+.ypfcom__banner-section--highlighted-text.banner {
+    margin-block-end: 55px;
+}
+
+@media (max-width: 420px) {
+    .ypfcom__banner-section--highlighted-text.banner {
+        margin-block-end: 75px;
+    }
+    .ypfcom__banner-section--highlighted-text.banner .banner__containe .banner__title {
+        white-space: nowrap;
+    }
+}
+
+/* #endregion BANNER */
+
+/* #region ANNUAL REPORT */
+.investors__financial-information {
+    padding-inline: 0.75rem;
+    box-sizing: border-box;
+}
+.investors__annual-report {
+    margin-bottom: 16px;
+}
+.investors__annual-report .filter-document-list__title {
+    font-family: din-black;
+}
+.investors__annual-report .filter-document-list__content {
+    padding-top: 0;
+}
+.investors__annual-report .filter-document-list__content p {
+    font-family: "din-regular";
+    font-size: 13px;
+    line-height: 19.5px;
+    color: #838383;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+.investors__annual-report .filter-document-list__content .custom-select {
+    font-family: din-medium;
+}
+.investors__annual-report .filter-document-list__content .custom-select__options {
+    z-index: 999;
+}
+
+.investors__annual-report .filter-document-list__documents ul li.filterItems a {
+    font-family: din-medium;
+    display: inline-flex;
+    vertical-align: bottom;
+    line-height: 23px;
+}
+.investors__annual-report .filter-document-list__documents ul li.filterItems a img {
+    margin-right: 3px;
+}
+
+/* #endregion ANNUAL REPORT */

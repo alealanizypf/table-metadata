@@ -1,0 +1,70 @@
+/* #region TABLAS */
+
+.main-table .main-table__table {
+    overflow-x: auto;
+}
+
+.main-table .main-table__table table {
+    display: inline-table;
+    margin-bottom: 0;
+}
+
+.main-table .main-table__table table th,
+.main-table .main-table__table table td {
+    border: none;
+}
+
+.main-table .main-table__table table th {
+    font-family: din-black;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 30px;
+    background-color: #f3f3f3;
+    color: #292929;
+    border: 1px solid #dadada;
+    padding: 4px 16px;
+}
+.main-table .main-table__table table td {
+    font-family: din-medium;
+    font-size: 16px;
+    font-weight: 400 !important;
+    line-height: 24px;
+    color: #838383;
+    padding: 24px 12px;
+    border-bottom: 1px solid #dcdfe6;
+}
+
+.main-table .main-table__pagination {
+    display: none;
+}
+
+/* #endregion TABLAS */
+
+/* #region FILES */
+
+.loader-spinner__container {
+    margin-top: 20px;
+}
+.links-list .links-list__links .links-list__item a {
+    display: block;
+    font-family: din-medium;
+    font-size: 13.33px;
+    line-height: 20px;
+    color: #838383;
+    padding: 10px 30px 10px 40px;
+    margin-block: 40px;
+    background-color: #f0f0f0;
+    width: fit-content;
+    width: -moz-fit-content;
+    text-decoration: none;
+    background-image: url(https://ypf.com/images/decorativas/pdf.png);
+    background-repeat: no-repeat;
+    background-position-y: 9px;
+    background-position-x: 11px;
+}
+.links-list .links-list__links .links-list__item a:hover {
+    text-decoration: none;
+    color: #3a3939;
+}
+
+/* #endregion FILES */

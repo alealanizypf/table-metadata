@@ -1,0 +1,44 @@
+/* #region TABLA */
+
+.main-table.capital-stock-table .main-table__table {
+    overflow-x: auto;
+}
+
+.main-table.capital-stock-table > h2 {
+    font-family: din-medium;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px;
+    background-color: #e0e0e0;
+    color: #606266;
+}
+
+.main-table.capital-stock-table .main-table__table table {
+    display: inline-table;
+    margin-bottom: 0;
+}
+
+.main-table.capital-stock-table .main-table__table table th,
+.main-table.capital-stock-table .main-table__table table td {
+    font-family: din-regular;
+    font-size: 14px;
+    font-weight: bold !important;
+    line-height: 21px;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.main-table.capital-stock-table .main-table__table table th {
+    background-color: #f4f5f8;
+    color: #000;
+}
+
+.main-table.capital-stock-table .main-table__table table td {
+    color: #838383;
+}
+
+.main-table.capital-stock-table .main-table__pagination {
+    display: none;
+}
+
+/* #endregion TABLA */

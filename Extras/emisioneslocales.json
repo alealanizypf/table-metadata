@@ -1,0 +1,679 @@
+[
+   {
+       "text": "Clase XXXV",
+       "props": {
+           "Bono": "Clase XXXV",
+           "FechaEmisión": "27/02/2025",
+           "Vencimiento": "27/02/2027",
+           "MontoVigente": "USD 139.894.182",
+           "MercadoDeCotizacion": "BCBA y MAE",
+           "Estado": "Vigente"
+       },
+       "children": [
+           {
+               "text": "YPF - Aviso de Resultados ONs Clase XXXV y XXXVI",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20S.A.%20-%20Clases%20XXXV%20y%20XXXVI%20-%20Aviso%20de%20Resultados.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - Aviso de Suscripción ONs Clase XXXV y XXXVI",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20S.A.%20-%20Clases%20XXXV%20y%20XXXVI%20-%20Aviso%20de%20Resultados.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - Suplemento de Prospecto ONs Clase XXXV y XXXVI",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Clases%20XXXV%20y%20XXXVI%20-%20Suplemento%20de%20Prospecto.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - Aviso Complementario ONs Clase XXXV y XXXVI",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20ON%20XXXV%20y%20XXXVI%20-%20Aviso%20Complementario%20-%20Calificaciones.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           }
+       ],
+       "type": "Emisiones"
+   },
+   {
+       "text": "Clase XXXVI",
+       "props": {
+           "Bono": "Clase XXXVI",
+           "FechaEmisión": "27/02/2025",
+           "Vencimiento": "27/08/2025",
+           "MontoVigente": "USD 58.971.000",
+           "MercadoDeCotizacion": "BCBA y MAE",
+           "Estado": "Vigente"
+       },
+       "children": [
+           {
+               "text": "YPF - Aviso de Resultados ONs Clase XXXV y XXXVI",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20S.A.%20-%20Clases%20XXXV%20y%20XXXVI%20-%20Aviso%20de%20Resultados.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - Aviso de Suscripción ONs Clase XXXV y XXXVI",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20S.A.%20-%20Clases%20XXXV%20y%20XXXVI%20-%20Aviso%20de%20Resultados.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - Suplemento de Prospecto ONs Clase XXXV y XXXVI",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Clases%20XXXV%20y%20XXXVI%20-%20Suplemento%20de%20Prospecto.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - Aviso Complementario ONs Clase XXXV y XXXVI",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20ON%20XXXV%20y%20XXXVI%20-%20Aviso%20Complementario%20-%20Calificaciones.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           }
+       ],
+       "type": "Emisiones"
+   },
+   {
+       "text": "Clase XXXIII",
+       "props": {
+           "Bono": "Clase XXXIII",
+           "FechaEmisión": "10/10/2024",
+           "Vencimiento": "10/10/2028",
+           "MontoVigente": "USD 25.000.000",
+           "MercadoDeCotizacion": "BCBA y MAE",
+           "Estado": "Vigente"
+       },
+       "children": [
+           {
+               "text": "YPF Aviso de Resultados ONs Clase XXXII y XXXIII (EXE)",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF-Aviso-de-Resultados-ONs-Clase-XXXII-y-XXXIII-(EXE).pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF Clases XXXII y XXXIII aviso de suscripcion (EXE)",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF-Clases-XXXII-y-XXXIII-aviso-de-suscripcion-(EXE).pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF Clase XXXII y Clase XXXIII suplemento de prospecto (EXE)",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF-Clase-XXXII-y-Clase-XXXIII-suplemento-de-prospecto-(EXE).pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF ON XXXII y XXXIII aviso complementario calificaciones (exe)",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF-ON-XXXII-y-XXXIII-aviso-complementario-calificaciones-(exe).pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           }
+       ],
+       "type": "Emisiones"
+   },
+   {
+       "text": "Clase XXXII",
+       "props": {
+           "Bono": "Clase XXXII",
+           "FechaEmisión": "10/10/2024",
+           "Vencimiento": "10/10/2028",
+           "MontoVigente": "AR$ 125.000.000",
+           "MercadoDeCotizacion": "BCBA y MAE",
+           "Estado": "Vigente"
+       },
+       "children": [
+           {
+               "text": "YPF Aviso de Resultados ONs Clase XXXII y XXXIII (EXE)",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF-Aviso-de-Resultados-ONs-Clase-XXXII-y-XXXIII-(EXE).pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF Clase XXXII y Clase XXXIII suplemento de prospecto (EXE)",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF-Clase-XXXII-y-Clase-XXXIII-suplemento-de-prospecto-(EXE).pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF Clases XXXII y XXXIII aviso de suscripcion (EXE)",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF-Clases-XXXII-y-XXXIII-aviso-de-suscripcion-(EXE).pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF ON XXXII y XXXIII aviso complementario calificaciones",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF-ON-XXXII-y-XXXIII-aviso-complementario-calificaciones-(exe).pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           }
+       ],
+       "type": "Emisiones"
+   },
+   {
+       "text": "Clase XX",
+       "props": {
+           "Bono": "Clase XX",
+           "FechaEmisión": "22/07/2021",
+           "Vencimiento": "22/07/2032",
+           "MontoVigente": "USD 384.209.900",
+           "MercadoDeCotizacion": "MAE",
+           "Estado": "Vigente"
+       },
+       "children": [
+           {
+               "text": "YPF - Aviso de Resultados - On Clase XX",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Aviso%20de%20Resultados%20-%20On%20Clase%20XX.PDF",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - Aviso de Suscripción",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Aviso%20de%20Suscripci%C3%B3n.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - Suplemento de Precio Ons Clase XX",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Suplemento%20de%20Precio%20Ons%20Clase%20XX.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           }
+       ],
+       "type": "Emisiones"
+   },
+   {
+       "text": "Clase XXI",
+       "props": {
+           "Bono": "Clase XXI",
+           "FechaEmisión": "10/01/2023",
+           "Vencimiento": "10/01/2026",
+           "MontoVigente": "USD 230.000.000",
+           "MercadoDeCotizacion": "MAE",
+           "Estado": "Vigente"
+       },
+       "children": [
+           {
+               "text": "YPF - Aviso de Resultados ONs Clase XXI y Clase XXII",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20%20-%20Aviso%20de%20Resultados%20ONs%20Clase%20XXI%20y%20Clase%20XXII.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - Aviso Complementario - 2023-01-03-175732",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Aviso%20Complementario%20-%202023-01-03-175732.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - Aviso de Suscripción ON Clase XXI y Clase XXII",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Aviso%20de%20Suscripci%C3%B3n%20ON%20Clase%20XXI%20y%20Clase%20XXII.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - Suplemento de Precio Clase XXI Clase XXII",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Suplemento%20de%20Precio%20Clase%20XXI%20Clase%20XXII.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           }
+       ],
+       "type": "Emisiones"
+   },
+   {
+       "text": "Clase XXIII",
+       "props": {
+           "Bono": "Clase XXIII",
+           "FechaEmisión": "25/04/2023",
+           "Vencimiento": "25/04/2025",
+           "MontoVigente": "US$ 147.394.102",
+           "MercadoDeCotizacion": "MAE y BCBA",
+           "Estado": "Vigente"
+       },
+       "children": [
+           {
+               "text": "YPF - Aviso de Suscripción - ONs Clase XXIII, XXIV, y XXII Adicionales (EXE)",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Aviso%20de%20Suscripci%C3%B3n%20-%20ONs%20Clase%20XXIII%2C%20XXIV%2C%20y%20XXII%20Adicionales%20%28EXE%29.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - ON´s Clase XXIII, XXIV y XXIV Adicional - Suplemento (EXE)",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20ON%C2%B4s%20Clase%20XXIII%2C%20XXIV%20y%20XXIV%20Adicional%20-%20Suplemento%20%28EXE%29.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - ONs XXIII XXIV y XXII Adicionales - Aviso Complementario y Rectificatorio (EXE)",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20ONs%20%20XXIII%20XXIV%20y%20XXII%20Adicionales%20-%20Aviso%20Complementario%20y%20Rectificatorio%20(EXE).pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - ONs XXIII, XXIV y XXII Adicionales - Aviso Complementario (EXE)pdf",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20ONs%20%20XXIII,%20XXIV%20y%20XXII%20Adicionales%20-%20Aviso%20Complementario%20(EXE)pdf.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF -ON´s Clases XXIII, XXIV y XXII Adicionales - Aviso de Resultados - (EXE)",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-ON%C2%B4s%20Clases%20XXIII%2C%20XXIV%20y%20XXII%20Adicionales%20-%20Aviso%20de%20Resultados%20-%20%28EXE%29.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           }
+       ],
+       "type": "Emisiones"
+   },
+   {
+       "text": "Clase XXIV",
+       "props": {
+           "Bono": "Clase XXIV",
+           "FechaEmisión": "25/04/2023",
+           "Vencimiento": "25/04/2027",
+           "MontoVigente": "US$ 37.518.057",
+           "MercadoDeCotizacion": "MAE y BCBA",
+           "Estado": "Vigente"
+       },
+       "children": [
+           {
+               "text": "YPF - Aviso de Suscripción - ONs Clase XXIII, XXIV, y XXII Adicionales (EXE)",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Aviso%20de%20Suscripci%C3%B3n%20-%20ONs%20Clase%20XXIII,%20XXIV,%20y%20XXII%20Adicionales%20(EXE).pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - ON´s Clase XXIII, XXIV y XXIV Adicional - Suplemento (EXE)",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20ON%C2%B4s%20Clase%20XXIII%2C%20XXIV%20y%20XXIV%20Adicional%20-%20Suplemento%20%28EXE%29.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - ONs XXIII XXIV y XXII Adicionales - Aviso Complementario y Rectificatorio (EXE)",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20ONs%20%20XXIII%20XXIV%20y%20XXII%20Adicionales%20-%20Aviso%20Complementario%20y%20Rectificatorio%20%28EXE%29.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - ONs XXIII, XXIV y XXII Adicionales - Aviso Complementario (EXE)pdf",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20ONs%20%20XXIII,%20XXIV%20y%20XXII%20Adicionales%20-%20Aviso%20Complementario%20(EXE)pdf.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF -ON´s Clases XXIII, XXIV y XXII Adicionales - Aviso de Resultados - (EXE)",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-ON%C2%B4s%20Clases%20XXIII%2C%20XXIV%20y%20XXII%20Adicionales%20-%20Aviso%20de%20Resultados%20-%20%28EXE%29.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           }
+       ],
+       "type": "Emisiones"
+   },
+   {
+       "text": "Clase XXV",
+       "props": {
+           "Bono": "Clase XXV",
+           "FechaEmisión": "13/06/2023",
+           "Vencimiento": "13/02/2026",
+           "MontoVigente": "US$ 263.000.000",
+           "MercadoDeCotizacion": "BCBA y MAE",
+           "Estado": "Vigente"
+       },
+       "children": [
+           {
+               "text": "YPF - Aviso de Resultados ON Clase XXV Adicionales",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Aviso%20de%20Resultados%20ON%20Clase%20XXV%20Adicionales.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - Aviso de Resultados ON Clase XXV",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Aviso%20de%20Resultados%20ON%20Clase%20XXV.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - ONs XXV - Aviso Complementario Califiación",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20ONs%20%20XXV%20-%20Aviso%20Complementario%20Califiaci%C3%B3n.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - ONs XXV Adicional - Aviso Complementario Calificación",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20ONs%20%20XXV%20Adicional%20-%20Aviso%20Complementario%20Calificaci%C3%B3n.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - ONs Clase XXV - Aviso de Suscripción",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20ONs%20Clase%20XXV%20-%20Aviso%20de%20Suscripci%C3%B3n.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - ONs Clase XXV Adicionales - Aviso de Suscripción",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20ONs%20Clase%20XXV%20Adicionales%20-%20Aviso%20de%20Suscripci%C3%B3n.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - Suplemento de Precio Clase 25 Adicional",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Suplemento%20de%20Precio%20Clase%2025%20Adicional.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - Suplemento de Precio Clase XXV",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Suplemento%20de%20Precio%20Clase%20XXV.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           }
+       ],
+       "type": "Emisiones"
+   },
+   {
+       "text": "Clase XXVI",
+       "props": {
+           "Bono": "Clase XXVI",
+           "FechaEmisión": "12/09/2023",
+           "Vencimiento": "12/09/2028",
+           "MontoVigente": "US$ 400.000.000",
+           "MercadoDeCotizacion": "MAE y BCBA",
+           "Estado": "Vigente"
+       },
+       "children": [
+           {
+               "text": "YPF - ONs Clase XXI Adicional y Clase XXVI - Aviso Complementario",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20ONs%20Clase%20XXI%20Adicional%20y%20Clase%20XXVI%20-%20Aviso%20Complementario.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - ONs Clase XXI Adicional y Clase XXVI - Aviso de Resultados",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20ONs%20Clase%20XXI%20Adicional%20y%20Clase%20XXVI%20-%20Aviso%20de%20Resultados.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - ONs Clase XXVI y Clase XXI Adicional - Aviso de Suscripción",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20ONs%20Clase%20XXVI%20y%20Clase%20XXI%20Adicional%20-%20Aviso%20de%20Suscripci%C3%B3n.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - ONs Clase XXVI y XXI Adicional - Suplemento de Precio",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20ONs%20Clase%20XXVI%20y%20XXI%20Adicional%20-%20Suplemento%20de%20Precio.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           }
+       ],
+       "type": "Emisiones"
+   },
+   {
+       "text": "Clase XXVII",
+       "props": {
+           "Bono": "Clase XXVII",
+           "FechaEmisión": "10/10/2023",
+           "Vencimiento": "10/10/2026",
+           "MontoVigente": "US$ 127.904.997",
+           "MercadoDeCotizacion": "MAE y BCBA",
+           "Estado": "Vigente"
+       },
+       "children": [
+           {
+               "text": "YPF - Aviso de Resultados ON Clase XXVII",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20%20-%20Aviso%20de%20Resultados%20ON%20Clase%20XXVII.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - ON Clase XXVII - Aviso de Suscripción",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20ON%20Clase%20XXVII%20%20-%20Aviso%20de%20Suscripci%C3%B3n.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - ON Clase XXVII - Suplemento de Precio",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20ON%20Clase%20XXVII%20-%20Suplemento%20de%20Precio.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           }
+       ],
+       "type": "Emisiones"
+   },
+   {
+       "text": "Clase XXIX",
+       "props": {
+           "Bono": "Clase XXIX",
+           "FechaEmisión": "28/05/2024",
+           "Vencimiento": "28/05/2026",
+           "MontoVigente": "US$ 177.717.716",
+           "MercadoDeCotizacion": "MAE y BCBA",
+           "Estado": "Vigente"
+       },
+       "children": [
+           {
+               "text": "YPF - Aviso de Resultados ON Clase XXIX",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/Aviso-de-Resultados-ON-Clase-XXIX.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - ON Clase XXIX - Aviso de Suscripción",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/Aviso-de-Suscripci%C3%B3n-ON-Clase-XXIX.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - ON Clase XXIX - Suplemento de Prospecto",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/Suplemento-de-prospecto-ON-Clase-XXIX.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           }
+       ],
+       "type": "Emisiones"
+   },
+   {
+       "text": "Clase XXX",
+       "props": {
+           "Bono": "Clase XXX",
+           "FechaEmisión": "01/07/2024",
+           "Vencimiento": "01/07/2026",
+           "MontoVigente": "US$ 185.000.000",
+           "MercadoDeCotizacion": "MAE y BCBA",
+           "Estado": "Vigente"
+       },
+       "children": [
+           {
+               "text": "YPF - Aviso de Resultados ON Clase XXX",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Clase%20XXX%20-%20Aviso%20de%20Resultados%20(EXE).pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - Aviso de Suscripción ON Clase XXX",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Clase%20XXX%20-%20Aviso%20de%20Suscripci%C3%B3n%20(EXE)%201.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - Suplemento de Prospecto ON Clase XXX",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20Clase%20XXX%20-%20Suplemento%20de%20Prospecto%20-%20ON%20Dolar%20Linked%20(EXE)%201.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           },
+           {
+               "text": "YPF - Aviso Complementario ON Clase XXX",
+               "props": {
+                   "url": "https://inversores.ypf.com/documents/emisiones/locales/YPF%20-%20ON%20XXX%20-%20Aviso%20Complementario%20Califiaciones.pdf",
+                   "alt": "Descargar documento",
+                   "target": "Nueva"
+               },
+               "type": "link"
+           }
+       ],
+       "type": "Emisiones"
+   }
+]
