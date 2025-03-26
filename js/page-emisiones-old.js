@@ -58,8 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
         .toLowerCase();
 
       // Agregamos las celdas para cada columna
-      console.log("columnasSet", columnasSet);
-      console.log("columnas", columnas);
       columnasSet.forEach((columna) => {
         const td = document.createElement("td");
 
@@ -133,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return tabla;
   }
 
-  // Función para mostrar/ocultar filas hijas
+  // Función para mostrar/ocultar filas hijas en la tabla
   function toggleFilasHijas(id) {
     const filasHijas = document.querySelectorAll(`.${id}`);
     filasHijas.forEach((fila) => {
@@ -143,54 +141,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function generateCards(data) {
     const container = document.createElement("div");
-    //   container.className = 'mt-cards__container';
+    container.className = "mt-cards__container";
 
     data.forEach((item, index) => {
       // Crear tarjeta principal
       const card = document.createElement("div");
-      card.className = `mt-cards__card main-table__row main-table__row_index--${index}`;
+      card.className = "mt-cards__card metadata-cards__row";
 
       if (item.children && item.children.length > 0) {
+        const groupId = `group-${Math.random().toString(36).substr(2, 9)}`;
         card.classList.add(
-          "main-table__row--group",
-          `main-table__row--group-${item.props.id || generateId()}`,
-          "main-table__row--group-parent",
+          "metadata-cards__row--group",
+          `metadata-cards__row--group-${groupId}`,
+          "metadata-cards__row--group-parent",
           "mt-cards__card--group-parent"
         );
-      }
-      
-      // Agregar campos
-      //TODO: ver esto 
-      const fields = [
-        "Bono",
-        "FechaEmisión",
-        "Vencimiento",
-        "MontoVigente",
-        "MercadoDeCotizacion",
-        "Estado",
-      ];
-      fields.forEach((field) => {
-        const fieldDiv = document.createElement("div");
-        fieldDiv.className = "mt-cards__field";
-        fieldDiv.style.display = "flex";
 
-        const label = document.createElement("div");
-        label.className = "mt-cards__field-label";
-        label.innerHTML = `<span>${field.toUpperCase()}:</span>`;
+        // Generar campos
+        const fields = [
+          { key: "Bono", value: item.props.Bono },
+          { key: "Fecha de Emisión", value: item.props.FechaEmision },
+          { key: "Vencimiento", value: item.props.Vencimiento },
+          { key: "Monto Vigente", value: item.props.MontoVigente },
+          { key: "Mercado De Cotizacion", value: item.props.MercadoDeCotizacion },
+          { key: "Estado", value: item.props.Estado },
+        ];
 
-        const value = document.createElement("div");
-        value.className = "mt-cards__field-value";
-        value.innerHTML = `<span class="main-table__text main-table__cell">${
-          item.props[field] || "-"
-        }</span>`;
+        fields.forEach((field) => {
+          const fieldDiv = createField(field.key, field.value);
+          card.appendChild(fieldDiv);
+        });
 
-        fieldDiv.appendChild(label);
-        fieldDiv.appendChild(value);
-        card.appendChild(fieldDiv);
-      });
-
-      // Agregar botón de descargas si hay children
-      if (item.children && item.children.length > 0) {
+        // Agregar sección de descargas
         const downloadField = document.createElement("div");
         downloadField.className = "mt-cards__field";
         downloadField.style.display = "flex";
@@ -202,52 +184,83 @@ document.addEventListener("DOMContentLoaded", function () {
         const downloadValue = document.createElement("div");
         downloadValue.className = "mt-cards__field-value";
         downloadValue.innerHTML = `
-        <button class="main-table__group-collapsable main-table__group-collapsable--default" data-has-event-listener="true">
-          <span>
-            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="detail-angle-down svg-inline--fa fa-angle-down fa-w-10">
-              <path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path>
-            </svg>
-          </span>
-        </button>`;
+           <span class="metadata-cards__group-collapsable metadata-cards__group-collapsable--default" data-group="${groupId}">
+             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="detail-angle-down svg-inline--fa fa-angle-down fa-w-10">
+               <path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path>
+             </svg>
+           </span>`
 
         downloadField.appendChild(downloadLabel);
         downloadField.appendChild(downloadValue);
         card.appendChild(downloadField);
 
-        // Agregar tarjetas child para las descargas
-        item.children.forEach((child, childIndex) => {
-          const childCard = document.createElement("div");
-          childCard.className = `mt-cards__card main-table__row main-table__row_index--${
-            index + childIndex
-          } main-table__row--group main-table__row--group-child`;
-          childCard.style.display = "none";
+        // Crear contenedor para links de descarga
+        const linksContainer = document.createElement("div");
+        linksContainer.className = `mt-cards__downloads-container mt-cards__downloads-${groupId}`;
+        linksContainer.style.display = "none";
 
-          const childField = document.createElement("div");
-          childField.className = "mt-cards__field";
-          childField.style.display = "flex";
-
-          const childValue = document.createElement("div");
-          childValue.className = "mt-cards__field-value";
-
+        // Agregar links de descarga
+        item.children.forEach((child) => {
           if (child.type === "link") {
-            childValue.innerHTML = `
-            <a href="${child.props.url}" target="${child.props.target}" class="main-table__link">
-              ${child.text}
-            </a>`;
-          } else {
-            childValue.innerHTML = `<span>${child.text}</span>`;
+            const linkDiv = document.createElement("div");
+            linkDiv.className = "mt-cards__download-link";
+            linkDiv.innerHTML = `<span data-colspan="6" style="" class="metadata-cards__text metadata-cards__cell">${child.text}</span>
+             <a href="${child.props.url}" target="${child.props.target}" class="metadata-cards__link">
+               Descargar
+             </a>`;
+            linksContainer.appendChild(linkDiv);
           }
-
-          childField.appendChild(childValue);
-          childCard.appendChild(childField);
-          container.appendChild(childCard);
         });
+
+        card.appendChild(linksContainer);
       }
 
       container.appendChild(card);
     });
 
+    // Agregar event listeners para los botones de descarga
+    container.addEventListener("click", (e) => {
+      const div = e.target.closest(".mt-cards__card")
+      if(div){
+         const button = div.querySelector(".metadata-cards__group-collapsable");
+         if (button) {
+           const groupId = button.dataset.group;
+           const linksContainer = container.querySelector(
+             `.mt-cards__downloads-${groupId}`
+           );
+           const icon = button.querySelector(".detail-angle-down");
+   
+           if (linksContainer) {
+             const isVisible = linksContainer.style.display === "block";
+             linksContainer.style.display = isVisible ? "none" : "block";
+             icon.style.transform = isVisible ? "" : "rotate(180deg)";
+           }
+         }
+      }
+    });
+
     return container;
+  }
+
+  function createField(label, value) {
+    const fieldDiv = document.createElement("div");
+    fieldDiv.className = "mt-cards__field";
+    fieldDiv.style.display = "flex";
+
+    const labelDiv = document.createElement("div");
+    labelDiv.className = "mt-cards__field-label";
+    labelDiv.innerHTML = `<span>${label.toUpperCase()}:</span>`;
+
+    const valueDiv = document.createElement("div");
+    valueDiv.className = "mt-cards__field-value";
+    valueDiv.innerHTML = `<span class="metadata-table__text metadata-table__cell">${
+      value || "-"
+    }</span>`;
+
+    fieldDiv.appendChild(labelDiv);
+    fieldDiv.appendChild(valueDiv);
+
+    return fieldDiv;
   }
   function generateHtml() {
     const containers = document.querySelectorAll("[data-metadata]");
