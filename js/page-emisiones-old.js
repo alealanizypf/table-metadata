@@ -148,39 +148,40 @@ document.addEventListener("DOMContentLoaded", function () {
       const card = document.createElement("div");
       card.className = "mt-cards__card metadata-cards__row";
 
+      const groupId = `group-${Math.random().toString(36).substr(2, 9)}`;
+      card.classList.add(
+        "metadata-cards__row--group",
+        `metadata-cards__row--group-${groupId}`,
+        "metadata-cards__row--group-parent",
+        "mt-cards__card--group-parent"
+      );
+
+      // Generar campos
+      const fields = [
+        { key: "Bono", value: item.props.Bono },
+        { key: "Fecha de Emisión", value: item.props.FechaEmision },
+        { key: "Vencimiento", value: item.props.Vencimiento },
+        { key: "Monto Vigente", value: item.props.MontoVigente },
+        { key: "Mercado De Cotizacion", value: item.props.MercadoDeCotizacion },
+        { key: "Estado", value: item.props.Estado },
+      ];
+
+      fields.forEach((field) => {
+        const fieldDiv = createField(field.key, field.value);
+        card.appendChild(fieldDiv);
+      });
+
+      // Agregar sección de descargas
+      const downloadField = document.createElement("div");
+      downloadField.className = "mt-cards__field";
+      downloadField.style.display = "flex";
+
+      const downloadLabel = document.createElement("div");
+      downloadLabel.className = "mt-cards__field-label";
+      downloadLabel.innerHTML = "<span>DESCARGAS:</span>";
+      downloadField.appendChild(downloadLabel);
+      
       if (item.children && item.children.length > 0) {
-        const groupId = `group-${Math.random().toString(36).substr(2, 9)}`;
-        card.classList.add(
-          "metadata-cards__row--group",
-          `metadata-cards__row--group-${groupId}`,
-          "metadata-cards__row--group-parent",
-          "mt-cards__card--group-parent"
-        );
-
-        // Generar campos
-        const fields = [
-          { key: "Bono", value: item.props.Bono },
-          { key: "Fecha de Emisión", value: item.props.FechaEmision },
-          { key: "Vencimiento", value: item.props.Vencimiento },
-          { key: "Monto Vigente", value: item.props.MontoVigente },
-          { key: "Mercado De Cotizacion", value: item.props.MercadoDeCotizacion },
-          { key: "Estado", value: item.props.Estado },
-        ];
-
-        fields.forEach((field) => {
-          const fieldDiv = createField(field.key, field.value);
-          card.appendChild(fieldDiv);
-        });
-
-        // Agregar sección de descargas
-        const downloadField = document.createElement("div");
-        downloadField.className = "mt-cards__field";
-        downloadField.style.display = "flex";
-
-        const downloadLabel = document.createElement("div");
-        downloadLabel.className = "mt-cards__field-label";
-        downloadLabel.innerHTML = "<span>DESCARGAS:</span>";
-
         const downloadValue = document.createElement("div");
         downloadValue.className = "mt-cards__field-value";
         downloadValue.innerHTML = `
@@ -188,54 +189,53 @@ document.addEventListener("DOMContentLoaded", function () {
              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="detail-angle-down svg-inline--fa fa-angle-down fa-w-10">
                <path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path>
              </svg>
-           </span>`
+           </span>`;
 
-        downloadField.appendChild(downloadLabel);
+        
         downloadField.appendChild(downloadValue);
         card.appendChild(downloadField);
+      }
+      // Crear contenedor para links de descarga
+      const linksContainer = document.createElement("div");
+      linksContainer.className = `mt-cards__downloads-container mt-cards__downloads-${groupId}`;
+      linksContainer.style.display = "none";
 
-        // Crear contenedor para links de descarga
-        const linksContainer = document.createElement("div");
-        linksContainer.className = `mt-cards__downloads-container mt-cards__downloads-${groupId}`;
-        linksContainer.style.display = "none";
-
-        // Agregar links de descarga
-        item.children.forEach((child) => {
-          if (child.type === "link") {
-            const linkDiv = document.createElement("div");
-            linkDiv.className = "mt-cards__download-link";
-            linkDiv.innerHTML = `<span data-colspan="6" style="" class="metadata-cards__text metadata-cards__cell">${child.text}</span>
+      // Agregar links de descarga
+      item.children.forEach((child) => {
+        if (child.type === "link") {
+          const linkDiv = document.createElement("div");
+          linkDiv.className = "mt-cards__download-link";
+          linkDiv.innerHTML = `<span data-colspan="6" style="" class="metadata-cards__text metadata-cards__cell">${child.text}</span>
              <a href="${child.props.url}" target="${child.props.target}" class="metadata-cards__link">
                Descargar
              </a>`;
-            linksContainer.appendChild(linkDiv);
-          }
-        });
+          linksContainer.appendChild(linkDiv);
+        }
+      });
 
-        card.appendChild(linksContainer);
-      }
+      card.appendChild(linksContainer);
 
       container.appendChild(card);
     });
 
     // Agregar event listeners para los botones de descarga
     container.addEventListener("click", (e) => {
-      const div = e.target.closest(".mt-cards__card")
-      if(div){
-         const button = div.querySelector(".metadata-cards__group-collapsable");
-         if (button) {
-           const groupId = button.dataset.group;
-           const linksContainer = container.querySelector(
-             `.mt-cards__downloads-${groupId}`
-           );
-           const icon = button.querySelector(".detail-angle-down");
-   
-           if (linksContainer) {
-             const isVisible = linksContainer.style.display === "block";
-             linksContainer.style.display = isVisible ? "none" : "block";
-             icon.style.transform = isVisible ? "" : "rotate(180deg)";
-           }
-         }
+      const div = e.target.closest(".mt-cards__card");
+      if (div) {
+        const button = div.querySelector(".metadata-cards__group-collapsable");
+        if (button) {
+          const groupId = button.dataset.group;
+          const linksContainer = container.querySelector(
+            `.mt-cards__downloads-${groupId}`
+          );
+          const icon = button.querySelector(".detail-angle-down");
+
+          if (linksContainer) {
+            const isVisible = linksContainer.style.display === "block";
+            linksContainer.style.display = isVisible ? "none" : "block";
+            icon.style.transform = isVisible ? "" : "rotate(180deg)";
+          }
+        }
       }
     });
 
