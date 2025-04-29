@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let metadataLocal = null;
   // Función para crear la tabla
   function crearTablaEmisiones(data, _columns) {
-   const columns = JSON.parse(_columns).filter(colProp => 
-      data.some(item => item.props.hasOwnProperty(colProp.prop))
-   );
+    const columns = JSON.parse(_columns).filter((colProp) =>
+      data.some((item) => item.props.hasOwnProperty(colProp.prop))
+    );
 
     //TODO: ver como es el tema de columna download
     //Se podria agregar por prop y ponerla como type "extra"
@@ -54,30 +54,29 @@ document.addEventListener("DOMContentLoaded", function () {
             tr.classList.add("metadata-table__row--group-parent-no-empty");
           }
           td.appendChild(expandBtn);
-        } 
-        if(columna.type == "mail"){
-         td.innerHTML=`<a href="mailto:${item.props[columna.prop]}">${item.props[columna.prop]}</a>`
         }
-        else {
+        if (columna.type == "mail") {
+          td.innerHTML = `<a href="mailto:${item.props[columna.prop]}">${
+            item.props[columna.prop]
+          }</a>`;
+        } else {
           td.textContent = item.props[columna.prop] || "";
         }
 
         tr.appendChild(td);
       });
 
-      //TODO: verificar si tiene children, ahí hacer esto.
-      // Hacemos que toda la fila sea clickeable
-      tr.onclick = function () {
-        toggleFilasHijas(this.dataset.id);
-        this.children[this.children.length - 1]
-          .querySelector("span")
-          ?.classList.toggle("rotate");
-      };
 
-      tbody.appendChild(tr);
-
-      // Filas hijas (documentos)
       if (item.children && item.children.length > 0) {
+        // Hacemos que toda la fila sea clickeable
+        tr.onclick = function () {
+          toggleFilasHijas(this.dataset.id);
+          this.children[this.children.length - 1]
+            .querySelector("span")
+            ?.classList.toggle("rotate");
+        };
+
+        //creacion de filas hijas
         item.children.forEach((child) => {
           if (child.type === "link") {
             const trChild = document.createElement("tr");
@@ -114,8 +113,8 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       }
+      tbody.appendChild(tr);
     });
-
     tabla.appendChild(tbody);
     return tabla;
   }
@@ -271,6 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   async function initialize() {
+   //TODO: ver de hacer configurable la metadata que va a usar.
     metadataLocal = JSON.parse(
       sessionStorage.getItem("ylite.metadataLocal.Investors")
     );
