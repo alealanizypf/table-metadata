@@ -1,31 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
   let metadataLocal = null;
   // Función para crear la tabla
-  function crearTablaEmisiones(data) {
+  function crearTablaEmisiones(data, _columns) {
+   const columns = [] 
+   const columnsProps = JSON.parse(_columns);
     // Obtenemos todas las claves posibles de props para las columnas
     const columnasSet = new Set();
     data.forEach((item) => {
       Object.keys(item.props).forEach((key) => columnasSet.add(key));
     });
-    columnasSet.add("Descargas");
-
-    const columnas = [];
-    columnasSet.forEach((col) => {
-      switch (col) {
-        case "FechaEmision":
-          columnas.push("Fecha de Emisión");
-          break;
-        case "MontoVigente":
-          columnas.push("Monto Vigente");
-          break;
-        case "MercadoDeCotizacion":
-          columnas.push("Mercado de Cotización");
-          break;
-        default:
-          columnas.push(col);
-          break;
+    columnsProps.forEach(colProp=>{
+      if(Array.from(columnasSet).some(columnSet=>columnSet == colProp.prop)){
+         columns.push(colProp)
       }
-    });
+    })
+    //TODO: ver como es el tema de columna download
+    //Se podria agregar por prop y ponerla como type "extra"
+    //   columnasSet.add("Downloads");
 
     // Creamos la estructura de la tabla
     const tabla = document.createElement("table");
@@ -35,9 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const headerRow = document.createElement("tr");
 
     // Agregamos las columnas principales
-    columnas.forEach((columna) => {
+    columns.forEach((columna) => {
       const th = document.createElement("th");
-      th.textContent = columna.toUpperCase();
+      th.textContent = columna.label;
       headerRow.appendChild(th);
     });
 
@@ -58,11 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
         .toLowerCase();
 
       // Agregamos las celdas para cada columna
-      columnasSet.forEach((columna) => {
+      columns.forEach((columna) => {
         const td = document.createElement("td");
 
-        // Si es la columna de Descargas, agregamos el botón
-        if (columna === "Descargas") {
+        // Si es la columna de Downloads, agregamos el botón
+        if (columna === "Downloads") {
           const expandBtn = document.createElement("button");
           expandBtn.className =
             "metadata-table__group-collapsable metadata-table__group-collapsable--default";
@@ -71,13 +62,18 @@ document.addEventListener("DOMContentLoaded", function () {
             tr.classList.add("metadata-table__row--group-parent-no-empty");
           }
           td.appendChild(expandBtn);
-        } else {
-          td.textContent = item.props[columna] || "";
+        } 
+        if(columna.type == "mail"){
+         td.innerHTML=`<a href="mailto:${item.props[columna.prop]}">${item.props[columna.prop]}</a>`
+        }
+        else {
+          td.textContent = item.props[columna.prop] || "";
         }
 
         tr.appendChild(td);
       });
 
+      //TODO: verificar si tiene children, ahí hacer esto.
       // Hacemos que toda la fila sea clickeable
       tr.onclick = function () {
         toggleFilasHijas(this.dataset.id);
@@ -99,9 +95,10 @@ document.addEventListener("DOMContentLoaded", function () {
               .toLowerCase()} hidden metadata-table__row--group metadata-table__row--group-child`;
 
             const tdText = document.createElement("td");
-            tdText.colSpan = columnas.length - 1;
+            tdText.colSpan = columns.length - 1;
             tdText.innerHTML = `<div><span data-colspan="6">${child.text}</span></div>`;
 
+            //TODO: primero verificar si existe un link
             // Creamos el enlace
             const tdDocumento = document.createElement("td");
             const link = document.createElement("a");
@@ -112,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
               e.stopPropagation(); // Evitar que el click se propague
             };
             link.className = "metadata-table__link metadata-table__cell";
-            link.textContent = "Descargar";
+            link.textContent = "Download";
 
             const divLink = document.createElement("div");
             divLink.appendChild(link);
@@ -158,12 +155,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Generar campos
       const fields = [
-        { key: "Bono", value: item.props.Bono },
-        { key: "Fecha de Emisión", value: item.props.FechaEmision },
-        { key: "Vencimiento", value: item.props.Vencimiento },
-        { key: "Monto Vigente", value: item.props.MontoVigente },
-        { key: "Mercado De Cotizacion", value: item.props.MercadoDeCotizacion },
-        { key: "Estado", value: item.props.Estado },
+        { key: "Bond", value: item.props.Bond },
+        { key: "Issue Date", value: item.props.IssueDate },
+        { key: "Maturity", value: item.props.Maturity },
+        { key: "Outstanding Amount", value: item.props.OutstandingAmount },
+        { key: "Market", value: item.props.Market },
+        { key: "Status", value: item.props.Status },
       ];
 
       fields.forEach((field) => {
@@ -171,27 +168,26 @@ document.addEventListener("DOMContentLoaded", function () {
         card.appendChild(fieldDiv);
       });
 
-      // Agregar sección de descargas
+      // Agregar sección de Downloads
       const downloadField = document.createElement("div");
       downloadField.className = "mt-cards__field";
       downloadField.style.display = "flex";
 
       const downloadLabel = document.createElement("div");
       downloadLabel.className = "mt-cards__field-label";
-      downloadLabel.innerHTML = "<span>DESCARGAS:</span>";
+      downloadLabel.innerHTML = "<span>DOWNLOADS:</span>";
       downloadField.appendChild(downloadLabel);
-      
+
       if (item.children && item.children.length > 0) {
         const downloadValue = document.createElement("div");
         downloadValue.className = "mt-cards__field-value";
         downloadValue.innerHTML = `
-           <span class="metadata-cards__group-collapsable metadata-cards__group-collapsable--default" data-group="${groupId}">
-             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="detail-angle-down svg-inline--fa fa-angle-down fa-w-10">
-               <path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path>
-             </svg>
-           </span>`;
+            <span class="metadata-cards__group-collapsable metadata-cards__group-collapsable--default" data-group="${groupId}">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="detail-angle-down svg-inline--fa fa-angle-down fa-w-10">
+                <path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path>
+              </svg>
+            </span>`;
 
-        
         downloadField.appendChild(downloadValue);
         card.appendChild(downloadField);
       }
@@ -206,9 +202,9 @@ document.addEventListener("DOMContentLoaded", function () {
           const linkDiv = document.createElement("div");
           linkDiv.className = "mt-cards__download-link";
           linkDiv.innerHTML = `<span data-colspan="6" style="" class="metadata-cards__text metadata-cards__cell">${child.text}</span>
-             <a href="${child.props.url}" target="${child.props.target}" class="metadata-cards__link">
-               Descargar
-             </a>`;
+              <a href="${child.props.url}" target="${child.props.target}" class="metadata-cards__link">
+                Download
+              </a>`;
           linksContainer.appendChild(linkDiv);
         }
       });
@@ -266,13 +262,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const containers = document.querySelectorAll("[data-metadata]");
     containers.forEach((container) => {
       const idMetadata = container.dataset.metadata;
+      const columns = container.dataset.props;
       const jsonData = metadataLocal.find(
         (element) => element.title == idMetadata
       );
       if (jsonData) {
         let element = null;
         if (container.className == "metadata-table")
-          element = crearTablaEmisiones(jsonData.data);
+          element = crearTablaEmisiones(jsonData.data, columns);
         if (container.className == "metadata-cards")
           element = generateCards(jsonData.data);
 
@@ -281,13 +278,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  function generateId() {
-    return Math.random().toString(36).substr(2, 9);
-  }
-
   async function initialize() {
     metadataLocal = JSON.parse(
-      sessionStorage.getItem("ylite.metadataLocal.inversores")
+      sessionStorage.getItem("ylite.metadataLocal.Investors")
     );
 
     if (metadataLocal) {
