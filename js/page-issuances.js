@@ -2,18 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
   let metadataLocal = null;
   // Función para crear la tabla
   function crearTablaEmisiones(data, _columns) {
-   const columns = [] 
-   const columnsProps = JSON.parse(_columns);
-    // Obtenemos todas las claves posibles de props para las columnas
-    const columnasSet = new Set();
-    data.forEach((item) => {
-      Object.keys(item.props).forEach((key) => columnasSet.add(key));
-    });
-    columnsProps.forEach(colProp=>{
-      if(Array.from(columnasSet).some(columnSet=>columnSet == colProp.prop)){
-         columns.push(colProp)
-      }
-    })
+   const columns = JSON.parse(_columns).filter(colProp => 
+      data.some(item => item.props.hasOwnProperty(colProp.prop))
+   );
+
     //TODO: ver como es el tema de columna download
     //Se podria agregar por prop y ponerla como type "extra"
     //   columnasSet.add("Downloads");
