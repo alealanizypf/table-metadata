@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     //TODO: ver como es el tema de columna download
-    //Se podria agregar por prop y ponerla como type "extra"
+    // Se podria agregar por prop y ponerla como type "extra"
     //   columnasSet.add("Downloads");
 
     // Creamos la estructura de la tabla
@@ -35,6 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
       // Fila principal
       const tr = document.createElement("tr");
       tr.className = "metadata-table__row--group-parent";
+      //verificacion de clase destacada
+      if ((item.props.type = "destacada")) {
+        tr.classList.add("destacada");
+      }
       tr.dataset.id = item.text
         .replace(/\s+/g, "-")
         .replace(/\*|\(|\)/g, "")
@@ -66,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
         tr.appendChild(td);
       });
 
-
       if (item.children && item.children.length > 0) {
         // Hacemos que toda la fila sea clickeable
         tr.onclick = function () {
@@ -89,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
             tdText.colSpan = columns.length - 1;
             tdText.innerHTML = `<div><span data-colspan="6">${child.text}</span></div>`;
 
-            //TODO: primero verificar si existe un link
             // Creamos el enlace
             const tdDocumento = document.createElement("td");
             const link = document.createElement("a");
@@ -270,7 +272,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   async function initialize() {
-   //TODO: ver de hacer configurable la metadata que va a usar.
+    //TODO: ver de hacer configurable la metadata que va a usar.
     metadataLocal = JSON.parse(
       sessionStorage.getItem("ylite.metadataLocal.Investors")
     );
