@@ -252,38 +252,39 @@ document.addEventListener("DOMContentLoaded", function () {
     return fieldDiv;
   }
 
-  function generateFilters(jsonData, container) {
-    let containersFilters = "";
-    const filtersProp = JSON.parse(container.dataset.filters);
-    const filters = filtersProp.map((_filter) => {
-      const filterItem = {};
-      jsonData.forEach((dataItem) => {
-        if (dataItem.props[_filter.prop] != undefined) {
-          if (filterItem[_filter.prop] == undefined) {
-            filterItem[_filter.prop] = [];
-          }
-          if (!filterItem[_filter.prop].includes(dataItem.props[_filter.prop]))
-            filterItem[_filter.prop].push(dataItem.props[_filter.prop]);
-        }
+function generateFilters(jsonData, container) {
+   const filtersProp = JSON.parse(container.dataset.filters);
+   
+   // Create filters map in a single pass through the data
+   const filtersMap = filtersProp.reduce((acc, { prop }) => {
+      acc[prop] = new Set();
+      return acc;
+   }, {});
+
+   // Populate unique values
+   jsonData.forEach(dataItem => {
+      filtersProp.forEach(({ prop }) => {
+         if (dataItem.props[prop] != null) {
+            filtersMap[prop].add(dataItem.props[prop]);
+         }
       });
-      
-      return filterItem;
-    });
-   //  console.log("filters",filters);
-    filters.forEach(filter=>{
-      containersFilters = `${containersFilters}<div class="scroll-wrapper">
-         <button class="scroll-button scroll-left">←</button>
-         <button class="scroll-button scroll-right">→</button>
-         <div class="scroll-container">`
-         Object.keys(filter).forEach(key=>{
-            filter[key].forEach(item=>{
-               containersFilters=`${containersFilters}<button class="year-button">${item}</button>`
-            })
-         })
-      containersFilters+=`</div></div>`
-    })
-    return containersFilters
-  }
+   });
+
+   // Generate HTML for filters
+   return Object.entries(filtersMap)
+      .map(([prop, values]) => `
+         <div class="scroll-wrapper">
+            <button class="scroll-button scroll-left" aria-label="Scroll left">←</button>
+            <button class="scroll-button scroll-right" aria-label="Scroll right">→</button>
+            <div class="scroll-container">
+               ${Array.from(values)
+                  .map(value => `<button class="year-button">${value}</button>`)
+                  .join('')}
+            </div>
+         </div>
+      `)
+      .join('');
+}
 
   function generateHtml() {
     const containers = document.querySelectorAll("[data-metadata]");
