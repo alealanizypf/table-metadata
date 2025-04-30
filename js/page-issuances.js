@@ -251,6 +251,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
     return fieldDiv;
   }
+
+  function generateFilters(jsonData, container) {
+    let containersFilters = "";
+    const filtersProp = JSON.parse(container.dataset.filters);
+    const filters = filtersProp.map((_filter) => {
+      const filterItem = {};
+      jsonData.forEach((dataItem) => {
+        if (dataItem.props[_filter.prop] != undefined) {
+          if (filterItem[_filter.prop] == undefined) {
+            filterItem[_filter.prop] = [];
+          }
+          if (!filterItem[_filter.prop].includes(dataItem.props[_filter.prop]))
+            filterItem[_filter.prop].push(dataItem.props[_filter.prop]);
+        }
+      });
+      
+      return filterItem;
+    });
+   //  console.log("filters",filters);
+    filters.forEach(filter=>{
+      containersFilters = `${containersFilters}<div class="scroll-wrapper">
+         <button class="scroll-button scroll-left">←</button>
+         <button class="scroll-button scroll-right">→</button>
+         <div class="scroll-container">`
+         Object.keys(filter).forEach(key=>{
+            filter[key].forEach(item=>{
+               containersFilters=`${containersFilters}<button class="year-button">${item}</button>`
+            })
+         })
+      containersFilters+=`</div></div>`
+    })
+    return containersFilters
+  }
+
   function generateHtml() {
     const containers = document.querySelectorAll("[data-metadata]");
     containers.forEach((container) => {
@@ -261,10 +295,15 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       if (jsonData) {
         let element = null;
+        container.innerHTML = "";
         if (container.className == "metadata-table")
           element = crearTablaEmisiones(jsonData.data, columns);
         if (container.className == "metadata-cards")
           element = generateCards(jsonData.data);
+
+        if (container.dataset.filters != undefined) {
+         container.innerHTML = generateFilters(jsonData.data, container);
+        }
 
         container.appendChild(element);
       }
