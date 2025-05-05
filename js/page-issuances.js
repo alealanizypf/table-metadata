@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   let metadataLocal = null;
+  let filtersValues = {};
+
   // Función para crear la tabla
-  function crearTablaEmisiones(data, _columns) {
+  function generateTableMetadata(data, _columns, id) {
     const columns = JSON.parse(_columns).filter((colProp) =>
       data.some((item) => item.props.hasOwnProperty(colProp.prop))
     );
@@ -12,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Creamos la estructura de la tabla
     const tabla = document.createElement("table");
-
+    tabla.id = "table-metadata-" + id;
     // Creamos el encabezado
     const thead = document.createElement("thead");
     const headerRow = document.createElement("tr");
@@ -129,8 +131,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  function generateCards(data) {
+  function generateCards(data, id) {
     const container = document.createElement("div");
+    container.id = "card-metadata-" + id;
     container.className = "mt-cards__container";
 
     data.forEach((item, index) => {
@@ -252,39 +255,146 @@ document.addEventListener("DOMContentLoaded", function () {
     return fieldDiv;
   }
 
-function generateFilters(jsonData, container) {
-   const filtersProp = JSON.parse(container.dataset.filters);
-   
-   // Create filters map in a single pass through the data
-   const filtersMap = filtersProp.reduce((acc, { prop }) => {
-      acc[prop] = new Set();
+  //Seccion de filtros de datos
+  function generateFilterHtml(jsonData, container, idMetadata) {
+    const filtersProp = JSON.parse(container.dataset.filters);
+
+    // Create filters map in a single pass through the data
+    const filtersMap = filtersProp.reduce((acc, { prop }) => {
+      acc[prop] = new Set(["Todos"]);
       return acc;
-   }, {});
+    }, {});
 
-   // Populate unique values
-   jsonData.forEach(dataItem => {
+    // Populate unique values
+    jsonData.forEach((dataItem) => {
       filtersProp.forEach(({ prop }) => {
-         if (dataItem.props[prop] != null) {
-            filtersMap[prop].add(dataItem.props[prop]);
-         }
+        if (dataItem.props[prop] != null) {
+          filtersMap[prop].add(dataItem.props[prop]);
+        }
       });
-   });
+    });
 
-   // Generate HTML for filters
-   return Object.entries(filtersMap)
-      .map(([prop, values]) => `
-         <div class="scroll-wrapper">
+    // Generate HTML for filters
+    return Object.entries(filtersMap)
+      .map(
+        ([prop, values]) => `
+         <div class="scroll-wrapper" id="wrapperFilter_${idMetadata}_${prop}">
+            <p>${prop}</p>
             <button class="scroll-button scroll-left" aria-label="Scroll left">←</button>
             <button class="scroll-button scroll-right" aria-label="Scroll right">→</button>
             <div class="scroll-container">
                ${Array.from(values)
-                  .map(value => `<button class="year-button">${value}</button>`)
-                  .join('')}
+                 .map(
+                   (value) => `<button class="filter-button">${value}</button>`
+                 )
+                 .join("")}
             </div>
          </div>
-      `)
-      .join('');
-}
+      `
+      )
+      .join("");
+  }
+
+  function filterData(filter, value) {
+    const [_, idMetadata, filterKey] = filter.split("_"); 
+    filtersValues[filterKey] = value;
+
+    // Cache de selectores DOM
+    const containers = document.querySelectorAll(
+      `[data-metadata="${idMetadata}"]`
+    );
+
+    // Encontrar los datos 
+    const jsonData = metadataLocal.find(
+      (element) => element.title === idMetadata
+    );
+    if (!jsonData) return; // Early return si no hay datos
+
+    // Filtrar datos 
+    const filteredData = jsonData.data.filter((item) =>
+      Object.entries(filtersValues).every(
+        ([key, filterValue]) =>
+          filterValue === "Todos" || item.props[key] === filterValue
+      )
+    );
+
+    // Actualizar DOM
+    containers.forEach((container) => {
+      const columns = container.dataset.props;
+
+      // Usar DocumentFragment para mejor rendimiento
+      const fragment = document.createDocumentFragment();
+      let newElement;
+
+      if (container.className === "metadata-table") {
+        newElement = generateTableMetadata(filteredData, columns, idMetadata);
+      } else if (container.className === "metadata-cards") {
+        newElement = generateCards(filteredData, idMetadata);
+      }
+
+      if (newElement) {
+        fragment.appendChild(newElement);
+
+        // Usar replaceChild en lugar de remove + append
+        const oldElement = container.lastElementChild;
+        if (oldElement) {
+          container.replaceChild(fragment, oldElement);
+        } else {
+          container.appendChild(fragment);
+        }
+      }
+    });
+  }
+
+  function addClickToScrollButtons() {
+    // Cantidad de píxeles a desplazar
+    const scrollAmount = 200;
+
+    // Manejar cada conjunto de botones de manera independiente
+    document.querySelectorAll(".scroll-wrapper").forEach((wrapper) => {
+      wrapper.querySelectorAll(".filter-button").forEach((button) => {
+        button.addEventListener("click", (event) => {
+          wrapper.querySelectorAll(".filter-button").forEach((btn) => {
+            btn.classList.remove("active");
+          });
+          button.classList.add("active");
+          filterData(wrapper.id, event.target.innerHTML);
+        });
+      });
+      const scrollContainer = wrapper.querySelector(".scroll-container");
+      const leftButton = wrapper.querySelector(".scroll-left");
+      const rightButton = wrapper.querySelector(".scroll-right");
+
+      leftButton.addEventListener("click", () => {
+        scrollContainer.scrollBy({
+          left: -scrollAmount,
+          behavior: "smooth",
+        });
+      });
+
+      rightButton.addEventListener("click", () => {
+        scrollContainer.scrollBy({
+          left: scrollAmount,
+          behavior: "smooth",
+        });
+      });
+
+      // Actualizar visibilidad de botones para este contenedor
+      const updateButtonsVisibility = () => {
+        const { scrollLeft, scrollWidth, clientWidth } = scrollContainer;
+        leftButton.style.display = scrollLeft > 0 ? "flex" : "none";
+        rightButton.style.display =
+          scrollLeft < scrollWidth - clientWidth ? "flex" : "none";
+      };
+
+      // Agregar listeners para este contenedor específico
+      scrollContainer.addEventListener("scroll", updateButtonsVisibility);
+      window.addEventListener("resize", () => updateButtonsVisibility());
+
+      // // Inicializar estado de los botones
+      // updateButtonsVisibility();
+    });
+  }
 
   function generateHtml() {
     const containers = document.querySelectorAll("[data-metadata]");
@@ -294,18 +404,25 @@ function generateFilters(jsonData, container) {
       const jsonData = metadataLocal.find(
         (element) => element.title == idMetadata
       );
+
       if (jsonData) {
         let element = null;
         container.innerHTML = "";
         if (container.className == "metadata-table")
-          element = crearTablaEmisiones(jsonData.data, columns);
+          element = generateTableMetadata(jsonData.data, columns, idMetadata);
         if (container.className == "metadata-cards")
-          element = generateCards(jsonData.data);
+          element = generateCards(jsonData.data, idMetadata);
 
+        //toda esta seccion es si se agregan filtros de datos
         if (container.dataset.filters != undefined) {
-         container.innerHTML = generateFilters(jsonData.data, container);
-        }
+          container.innerHTML = generateFilterHtml(
+            jsonData.data,
+            container,
+            idMetadata
+          );
 
+          addClickToScrollButtons();
+        }
         container.appendChild(element);
       }
     });
