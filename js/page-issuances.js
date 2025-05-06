@@ -72,6 +72,8 @@ document.addEventListener("DOMContentLoaded", function () {
         tr.appendChild(td);
       });
 
+      tbody.appendChild(tr);
+
       if (item.children && item.children.length > 0) {
         // Hacemos que toda la fila sea clickeable
         tr.onclick = function () {
@@ -117,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       }
-      tbody.appendChild(tr);
+      
     });
     tabla.appendChild(tbody);
     return tabla;
