@@ -12,7 +12,7 @@ function extraerDatosTabla() {
        let linkUrl = lastColLink ? lastColLink.href : null;
        
        let props = {};
-       let headers = ["Bono", "FechaEmisión", "Vencimiento", "MontoVigente", "MercadoDeCotizacion", "Estado"];
+       let headers = ["Bond", "IssueDate", "Maturity", "OutstandingAmount", "Market", "Status"];
        
        columnas.forEach((columna, index) => {
            if (index < headers.length) {
