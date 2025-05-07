@@ -4,13 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Función para crear la tabla
   function generateTableMetadata(data, _columns, id) {
-    const columns = JSON.parse(_columns).filter((colProp) =>
-      data.some((item) => item.props.hasOwnProperty(colProp.prop))
-    );
-
-    //TODO: ver como es el tema de columna download
-    // Se podria agregar por prop y ponerla como type "extra"
-    //   columnasSet.add("Downloads");
+    const columns = JSON.parse(_columns).filter((colProp) => {
+      if (colProp.type == "extra") return true;
+      if (colProp.type != "extra")
+        return data.some((item) => item.props.hasOwnProperty(colProp.prop));
+    });
 
     // Creamos la estructura de la tabla
     const tabla = document.createElement("table");
@@ -38,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const tr = document.createElement("tr");
       tr.className = "metadata-table__row--group-parent";
       //verificacion de clase destacada
-      if ((item.props.type = "destacada")) {
+      if (item.props.type === "destacada") {
         tr.classList.add("destacada");
       }
       tr.dataset.id = item.text
@@ -48,29 +46,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Agregamos las celdas para cada columna
       columns.forEach((columna) => {
-        const td = document.createElement("td");
-
-        // Si es la columna de Downloads, agregamos el botón
-        if (columna === "Downloads") {
-          const expandBtn = document.createElement("button");
-          expandBtn.className =
-            "metadata-table__group-collapsable metadata-table__group-collapsable--default";
-          if (item.children && item.children.length > 0) {
-            expandBtn.innerHTML = `<span><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="detail-angle-down svg-inline--fa fa-angle-down fa-w-10"><path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" class=""></path></svg></span>`;
-            tr.classList.add("metadata-table__row--group-parent-no-empty");
-          }
-          td.appendChild(expandBtn);
-        }
-        if (columna.type == "mail") {
-          td.innerHTML = `<a href="mailto:${item.props[columna.prop]}">${
-            item.props[columna.prop]
-          }</a>`;
-        } else {
-          td.textContent = item.props[columna.prop] || "";
-        }
-
-        tr.appendChild(td);
-      });
+         const td = document.createElement("td");
+     
+         // Si es la columna de extra, agregamos el botón
+         if (columna.type === "extra") {  // Cambiado == por ===
+             const expandBtn = document.createElement("button");
+             expandBtn.className =
+                 "metadata-table__group-collapsable metadata-table__group-collapsable--default";
+             
+             // Solo agregar el SVG y la clase si tiene hijos
+             if (item.children && item.children.length > 0) {
+                 expandBtn.innerHTML = `<span><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="detail-angle-down svg-inline--fa fa-angle-down fa-w-10"><path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" class=""></path></svg></span>`;
+                 tr.classList.add("metadata-table__row--group-parent-no-empty");
+             }
+             td.appendChild(expandBtn);
+         } else if (columna.type === "mail") {
+             td.innerHTML = `<a href="mailto:${item.props[columna.prop]}">${
+                 item.props[columna.prop]
+             }</a>`;
+         } else {
+             td.textContent = item.props[columna.prop] || "";
+         }
+     
+         tr.appendChild(td);
+     });
 
       tbody.appendChild(tr);
 
@@ -119,7 +118,6 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       }
-      
     });
     tabla.appendChild(tbody);
     return tabla;
@@ -298,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function filterData(filter, value) {
-    const [_, idMetadata, filterKey] = filter.split("_"); 
+    const [_, idMetadata, filterKey] = filter.split("_");
     filtersValues[filterKey] = value;
 
     // Cache de selectores DOM
@@ -306,13 +304,13 @@ document.addEventListener("DOMContentLoaded", function () {
       `[data-metadata="${idMetadata}"]`
     );
 
-    // Encontrar los datos 
+    // Encontrar los datos
     const jsonData = metadataLocal.find(
       (element) => element.title === idMetadata
     );
     if (!jsonData) return; // Early return si no hay datos
 
-    // Filtrar datos 
+    // Filtrar datos
     const filteredData = jsonData.data.filter((item) =>
       Object.entries(filtersValues).every(
         ([key, filterValue]) =>
@@ -431,7 +429,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   async function initialize() {
-    //TODO: ver de hacer configurable la metadata que va a usar.
     metadataLocal = JSON.parse(
       sessionStorage.getItem("ylite.metadataLocal.Investors")
     );
