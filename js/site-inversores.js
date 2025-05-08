@@ -405,7 +405,7 @@ function generateFilterHtml(jsonData, container, idMetadata) {
       const jsonData = metadataLocal.find(
         (element) => element.title == idMetadata
       );
-      console.log("jsonData",jsonData);
+      
       if (jsonData) {
         let element = null;
         container.innerHTML = "";
