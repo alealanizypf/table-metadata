@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Fila principal
       const tr = document.createElement("tr");
       tr.className = "metadata-table__row--group-parent";
+
       //verificacion de clase destacada
       if (item.props.type === "destacada") {
         tr.classList.add("destacada");
@@ -49,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
          const td = document.createElement("td");
      
          // Si es la columna de extra, agregamos el botón
-         if (columna.type === "extra") {  // Cambiado == por ===
+         if (columna.type === "extra") { 
              const expandBtn = document.createElement("button");
              expandBtn.className =
                  "metadata-table__group-collapsable metadata-table__group-collapsable--default";
@@ -256,44 +257,46 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   //Seccion de filtros de datos
-  function generateFilterHtml(jsonData, container, idMetadata) {
-    const filtersProp = JSON.parse(container.dataset.filters);
-
-    // Create filters map in a single pass through the data
-    const filtersMap = filtersProp.reduce((acc, { prop }) => {
-      acc[prop] = new Set(["Todos"]);
+function generateFilterHtml(jsonData, container, idMetadata) {
+   const filtersProp = JSON.parse(container.dataset.filters);
+   // Create filters map in a single pass through the data
+   const filtersMap = filtersProp.reduce((acc, { prop, label }) => {
+      acc[prop] = {
+         values: new Set(["Todos"]),
+         label: label || prop // Store the label if available, fallback to prop
+      };
       return acc;
-    }, {});
+   }, {});
 
-    // Populate unique values
-    jsonData.forEach((dataItem) => {
+   // Populate unique values
+   jsonData.forEach((dataItem) => {
       filtersProp.forEach(({ prop }) => {
-        if (dataItem.props[prop] != null) {
-          filtersMap[prop].add(dataItem.props[prop]);
-        }
+         if (dataItem.props[prop] != null) {
+            filtersMap[prop].values.add(dataItem.props[prop]);
+         }
       });
-    });
+   });
 
-    // Generate HTML for filters
-    return Object.entries(filtersMap)
+   // Generate HTML for filters
+   return Object.entries(filtersMap)
       .map(
-        ([prop, values]) => `
-         <div class="scroll-wrapper" id="wrapperFilter_${idMetadata}_${prop}">
-            <p>${prop}</p>
-            <button class="scroll-button scroll-left" aria-label="Scroll left">←</button>
-            <button class="scroll-button scroll-right" aria-label="Scroll right">→</button>
-            <div class="scroll-container">
-               ${Array.from(values)
-                 .map(
-                   (value) => `<button class="filter-button">${value}</button>`
-                 )
-                 .join("")}
-            </div>
-         </div>
+         ([prop, { values, label }]) => `
+          <div class="scroll-wrapper" id="wrapperFilter_${idMetadata}_${prop}">
+               <p>${label}</p>
+               <button class="scroll-button scroll-left" aria-label="Scroll left">←</button>
+               <button class="scroll-button scroll-right" aria-label="Scroll right">→</button>
+               <div class="scroll-container">
+                   ${Array.from(values)
+                      .map(
+                         (value) => `<button class="filter-button">${value}</button>`
+                      )
+                      .join("")}
+               </div>
+          </div>
       `
       )
       .join("");
-  }
+}
 
   function filterData(filter, value) {
     const [_, idMetadata, filterKey] = filter.split("_");
@@ -391,8 +394,6 @@ document.addEventListener("DOMContentLoaded", function () {
       scrollContainer.addEventListener("scroll", updateButtonsVisibility);
       window.addEventListener("resize", () => updateButtonsVisibility());
 
-      // // Inicializar estado de los botones
-      // updateButtonsVisibility();
     });
   }
 
@@ -404,7 +405,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const jsonData = metadataLocal.find(
         (element) => element.title == idMetadata
       );
-
+      console.log("jsonData",jsonData);
       if (jsonData) {
         let element = null;
         container.innerHTML = "";
